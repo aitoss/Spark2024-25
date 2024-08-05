@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Belfast-md;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Medium.ttf);
+}
+@font-face {
+  font-family: Belfast-rg;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Regular.ttfMedium.ttf);
+}
+@font-face {
+  font-family: Belfast-sb;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Semi\ Bold.ttfMedium.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  z-index: 10;
+}
