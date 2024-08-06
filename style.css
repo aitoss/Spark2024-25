@@ -26,3 +26,248 @@ body {
   position: relative;
   z-index: 10;
 }
+.page1{
+  position: relative;
+  overflow: hidden;
+  background: 
+      url('./Assets/Images/spots.png'),
+      url('./Assets/Images/Noise\ &\ Texture.png'),
+      radial-gradient(#3D2F2D 0%, #101010 66%);
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  animation: zoomEffect 100s linear infinite;
+  margin: 0;
+  padding: 0;
+}
+@keyframes zoomEffect {
+  0% { background-size: 100% auto; }
+  50% { background-size: 120% auto; }
+  100% { background-size: 100% auto; }
+} 
+nav{
+  z-index: 5;
+}
+header{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+  z-index: 3;
+}
+#sparkLogo{
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+#sparkLogo img{
+  height: 5rem;
+}
+
+#notes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B2B2B2;
+  z-index: 2;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid #4A4A4A;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(2px);
+}
+#notes:hover{
+  cursor: pointer;
+}
+#notes p{
+  font-size: 16px;
+}
+#notes span{
+  display: flex;
+  margin-left: 1rem;
+  align-content: center;
+  justify-content: center;
+  
+}
+#notes img{
+  height: 1rem;
+  
+}
+header ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   z-index: 2;
+   padding: 0 0.3rem;
+   border-radius: 1rem; 
+   border-radius: 12px;
+   border: 1px solid #4A4A4A;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+header ul li{
+  list-style: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3; 
+  padding: 1.5rem;
+}
+header ul li a{
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color:#B2B2B2;
+  letter-spacing: 1px;
+  z-index: 5;
+  font-weight: 400;
+  transition: ease-in-out 400ms;
+
+}
+header ul li:hover{
+  cursor: pointer;
+}
+
+main{
+  height:100vh;   
+  width: 100vw;  
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 2rem 2rem;
+  padding: 2rem;
+  animation: breathing 100s ease-in infinite normal;
+  box-sizing: border-box;
+  
+}
+#course{
+  position: absolute;
+  display: flex;
+  width: 95vw;
+  z-index: 5;
+  align-self: flex-start;
+  justify-content: center;
+  /* padding-left: 4rem; */
+
+}
+#course img{
+  width: 95vw;
+}
+.landingPageSpark{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  align-self: baseline;
+  margin-top: 15rem;
+  padding: auto;
+
+}
+.landingPageSpark h1{
+font-size: 3rem;
+text-align: center;
+word-spacing: 0.7rem;
+
+}
+.landingPageSpark p{
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color:#B2B2B2;
+  
+ 
+}
+#oss{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  background: none;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem;
+  border-radius: 3rem;
+  color:#B2B2B2;
+  outline: none;
+  border: 1px solid #b2b2b2;
+  z-index: 10;
+
+}
+#oss:hover{
+  cursor: pointer;
+}
+.ri-arrow-right-line{
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+.ossWord {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 5rem;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  margin-top: 5rem;
+  margin-bottom: 1.3rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#getStarted{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  background-image: linear-gradient(to right, #DF7841 0%, #894724 100%);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.7rem;
+  margin: 2rem;
+  font-size: 1.2rem;
+  border: none;
+  transition: 0.5s;
+  z-index: 10;
+}
+#getStarted:hover {
+  cursor: pointer;
+  background-position: right center; 
+}
+
+#circularPlanet{
+  position: absolute;
+  z-index: 1;
+  align-self: baseline;
+  justify-self: center;
+  margin-top: 6rem;
+  zoom: 118%;
+  
+}
+#circularPlanet img{
+  width: 98vw;
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  50% {
+    -webkit-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
