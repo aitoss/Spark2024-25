@@ -125,11 +125,16 @@ header ul li a{
   letter-spacing: 1px;
   z-index: 5;
   font-weight: 400;
-  transition: ease-in-out 400ms;
+  transition: ease-in-out 200ms;
 
 }
+header ul li a:hover{
+  color: #F16D47;
+}
+
 header ul li:hover{
   cursor: pointer;
+  
 }
 
 main{
@@ -147,15 +152,49 @@ main{
 #course{
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 95vw;
   z-index: 5;
   align-self: flex-start;
   justify-content: center;
   /* padding-left: 4rem; */
 
+
 }
-#course img{
-  width: 95vw;
+.upper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#course ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#FFFFFF;
+  
+}
+#upperList{
+  gap: 45vw;
+  margin-bottom: 8rem;
+}
+#lowerList{
+ gap: 85vw;
+}
+#course ul span{
+  font-family: Belfast-md;
+  font-size: 1rem;
+  color: #FFFFFF;
+
+  
+}
+#course ul :hover {
+  cursor: pointer;
+  color: #F16D47;
+}
+#course ul span br{
+  font-family: Belfast-md;
+  font-size: 0.9rem;
+  color: #B4BBB8;
 }
 .landingPageSpark{
   position: relative;

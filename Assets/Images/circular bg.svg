@@ -1,7 +1,7 @@
 <svg width="1814" height="1649" viewBox="0 0 1814 1649" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_988_591)">
 <ellipse cx="907" cy="820.5" rx="903" ry="820.5" fill="url(#paint0_radial_988_591)"/>
-<path d="M1809.5 820.5C1809.5 1273.33 1405.48 1640.5 907 1640.5C408.517 1640.5 4.5 1273.33 4.5 820.5C4.5 367.671 408.517 0.5 907 0.5C1405.48 0.5 1809.5 367.671 1809.5 820.5Z" stroke="black"/>
+<path d="M1809.5 820.5C1809.5 1273.33 1405.48 1640.5 907 1640.5C408.517 1640.5 4.5 1273.33 4.5 820.5C4.5 367.671 408.517 0.5 907 0.5C1405.48 0.5 1809.5 367.671 1809.5 820.5Z" />
 </g>
 <defs>
 <filter id="filter0_d_988_591" x="0" y="0" width="1814" height="1649" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -16,7 +16,7 @@
 </filter>
 <radialGradient id="paint0_radial_988_591" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(907 1152.5) rotate(-90) scale(1152.5 1117.64)">
 <stop offset="0.991767" stop-color="#101010"/>
-<stop offset="1" stop-color="#6D5E5C"/>
+ <stop offset="1" stop-color="#6D5E5C"/>
 </radialGradient>
 </defs>
 </svg>
