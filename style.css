@@ -505,8 +505,6 @@ main {
   
   header ul {
     display: none;
-    width: 100%;
-    gap: 0.5rem;
   }
   #notes{
     display: none;
