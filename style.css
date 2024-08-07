@@ -59,7 +59,9 @@ body {
 nav {
   z-index: 5;
 }
-
+#hamburger{
+  display: none;
+}
 header {
   display: flex;
   width: 90%;
@@ -392,12 +394,25 @@ main {
 
 @media (max-width: 992px) {
   header {
-    flex-direction: column;
+    
   }
   header ul {
     display: none;
     width: 100%;
     gap: 0.5rem;
+  }
+  #hamburger{
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    padding: 1rem 1.1rem;
+  }
+  #hamburger i{
+    color: #ffffff;
+    font-size: 1.5rem;
   }
   #notes{
     display: none;
@@ -516,20 +531,21 @@ main {
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
   }
+
   #upperList {
     gap: 35vw;
     margin-bottom: 5vw;
   }
   
   #lowerList {
-    gap: 65vw;
+    gap: 55vw;
   }
   #circularPlanet {
     position: absolute;
     z-index: 1;
     align-self: baseline;
     justify-self: center;
-    margin-top: 15vh;
+    margin-top: 17vh;
   }
   
   #circularPlanet img {
