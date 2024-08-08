@@ -10,6 +10,14 @@
   font-family: Belfast-sb;
   src: url(Utils/Fonts/Belfast\ Grotesk\ Semi\ Bold.ttf);
 }
+@font-face {
+  font-family: Mona-sans-md;
+  src: url(Utils/Fonts/Mona-Sans-Medium.ttf);
+}
+@font-face {
+  font-family: Mona-sans-sb;
+  src: url(Utils/Fonts/Mona-Sans-SemiBold.ttf);
+}
 
 * {
   padding: 0;
@@ -104,16 +112,21 @@ header {
   width: 100%;
   bottom: 0;
   height: 100%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  transition: 0.3s ease; 
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  transition: 0.2s ease;
   opacity: 0;
-  z-index: -1; 
+  z-index: -1;
   pointer-events: none;
 }
 
 #notes:hover::after {
-  /* height: 100%; */
-  opacity: 1;
+  height: 100%;
+  opacity: 0.6;
 }
 
 #notes:hover {
@@ -209,29 +222,31 @@ main {
   color: #ffffff;
   font-size: 1.25rem;
 }
-#course .upper ul li::marker, #course .upper p{
+#course .upper ul li::marker,
+#course .upper p {
   animation: headingAnimation ease-in 5s infinite alternate;
 }
 
-#course .lower ul li::marker, #course .lower p{
+#course .lower ul li::marker,
+#course .lower p {
   animation: headingAnimation ease-in 5s infinite alternate;
 }
 
-#course .upper span{
+#course .upper span {
   font-size: 14px;
   color: #919191;
 }
 
-#course .lower span{
+#course .lower span {
   font-size: 14px;
   color: #919191;
 }
 
-@keyframes headingAnimation{
-  0%{
+@keyframes headingAnimation {
+  0% {
     color: white;
   }
-  100%{
+  100% {
     color: #f16d47;
   }
 }
@@ -270,7 +285,7 @@ main {
 }
 
 .landingPageSpark h1 {
-  font-size: 3.5rem;
+  font-size: 3.5vw;
   text-align: center;
   word-spacing: 0.7rem;
 }
@@ -313,7 +328,7 @@ main {
   font-family: Belfast-md;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  background: linear-gradient(180deg, #ffffff 0%, #999999 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #7f7b7a 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -381,7 +396,7 @@ main {
 /* page1 end */
 
 /* page2 started */
-.page2{
+.page2 {
   min-height: 100vh;
   width: 100%;
   background: #101010;
@@ -389,7 +404,303 @@ main {
 /* page2 end */
 
 /* page3 started */
-.page3{
+.page3 {
   min-height: 100vh;
+  width: 100%;
   background: #101010;
+  position: relative;
+  overflow: hidden;
+}
+
+.page3 .page3-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* complete slider bar */
+.slider-navigation{
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.slider-navigation::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+/* orange blur */
+.orange-divider{
+  position: absolute;
+  top: -3%;
+  left: 8%;
+}
+
+/* day indicator */
+.nav-pointer{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: Mona-sans-sb;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transform: translate(-50%, 0%);
+}
+
+/* Agenda heading*/
+.page3 .page3-heading h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  font-family: Mona-sans-md;
+}
+
+/* timeline heading */
+.page3 .page3-heading h1 {
+  margin-top: 1rem;
+  font-family: Mona-sans-md;
+  font-size: 8rem;
+  font-weight: lighter;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #7f7b7a 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.page3 .timeline {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* container for all cards */
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* container for two cards: Day1 and Day2 */
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* individual card */
+.idv-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #4a4a4a;
+  width: 412px;
+  padding: 1.5rem;
+  background: url(Assets/Images/noise1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+/* cards on right (odd days card)*/
+.right{
+  margin-top: 20vh;
+  align-self: flex-end;
+}
+
+/* cards on left (even days card) */
+.left{
+  margin-top: 20vh;
+  align-self: flex-start;
+}
+
+/* card header */
+.idv-card .class-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* vs code and github icons */
+.idv-card .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4a4a4a;
+}
+
+.idv-card .icons img {
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* date of conduction of that particular class */
+.idv-card .date {
+  color: white;
+  font-family: Mona-sans-sb;
+  font-size: 0.75rem;
+}
+
+.card-btn img{
+  height: 0.8rem;
+}
+
+/* orange shadow from top on hover */
+.idv-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -50%;
+  height: 30%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(241, 109, 71),
+    rgba(241, 109, 71, 0.8),
+    rgba(241, 109, 71, 0)
+  );
+  filter: blur(40px);
+  transition: 0.2s ease-in;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.idv-card:hover::before {
+  height: 100%;
+  top: 0;
+  opacity: 0.1;
+}
+
+/* white shadow from bottom on hover */
+.idv-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  height: 30%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  filter: blur(30px);
+  transition: 0.2s ease-in;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.idv-card:hover::after {
+  height: 100%;
+  opacity: 0.1;
+}
+
+/* card content: topic of class and basic info */
+.card-content{
+  color: white;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-family: Mona-sans-sb;
+}
+
+.card-content div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.card-content div p{
+  color: #919191;
+  font-size: 0.85rem;
+}
+
+/* container for btns */
+.card-btns-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* same class given to both the btns as they have the same styling */
+.card-btn{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid #4a4a4a;
+  border-radius: 0.5rem;
+  outline: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-family: Mona-sans-sb;
+  font-size: 0.875rem;
+  cursor: pointer;
+  z-index: 9;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-btn img{
+  height: 0.8rem;
+}
+
+/* bottom white shadow on hover */
+.card-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  transition: 0.2s ease;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card-btn:hover::after {
+  height: 100%;
+  opacity: 0.75;
 }
