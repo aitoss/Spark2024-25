@@ -67,7 +67,9 @@ body {
 nav {
   z-index: 5;
 }
-
+#hamburger{
+  display: none;
+}
 header {
   display: flex;
   width: 90%;
@@ -239,6 +241,7 @@ main {
 
 #course .lower span {
   font-size: 14px;
+
   color: #919191;
 }
 
@@ -391,6 +394,178 @@ main {
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
     transform: scale(0.9);
+  }
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  header ul {
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .landingPageSpark h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    
+  }
+  header ul {
+    display: none;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  #hamburger{
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    padding: 1rem 1.1rem;
+  }
+  #hamburger i{
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  #notes{
+    display: none;
+  }
+  .landingPageSpark h1 {
+    font-size: 2.5rem;
+  }
+  
+  .landingPageSpark p {
+    font-size: 1rem;
+  }
+  
+  #oss {
+    font-size: 0.875rem;
+  }
+  
+  #getStarted {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  #upperList {
+    gap: 35vw;
+    margin-bottom: 5vw;
+  }
+  
+  #lowerList {
+    gap: 65vw;
+  }
+  #circularPlanet {
+    position: absolute;
+    z-index: 1;
+    align-self: baseline;
+    justify-self: center;
+    margin-top: 15vh;
+  }
+  
+  #circularPlanet img {
+    width: 150vh;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .landingPageSpark h1 {
+    font-size: 2rem;
+  }
+  
+  .landingPageSpark p {
+    font-size: 0.875rem;
+  }
+  
+  #oss {
+    font-size: 0.75rem;
+  }
+  
+  #getStarted {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  #upperList {
+    gap: 35vw;
+    margin-bottom: 5vw;
+  }
+  
+  #lowerList {
+    gap: 65vw;
+  }
+  #circularPlanet {
+    position: absolute;
+    z-index: 1;
+    align-self: baseline;
+    justify-self: center;
+    margin-top: 15vh;
+  }
+  
+  #circularPlanet img {
+    width: 150vh;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  header ul {
+    display: none;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  #notes{
+    display: none;
+  }
+  .landingPageSpark{
+    margin-top: 20rem;
+  }
+  .landingPageSpark h1 {
+    font-size: 1.8rem;
+  }
+  
+  .landingPageSpark p {
+    font-size: 0.75rem;
+  }
+  
+  #oss {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  #getStarted {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  #upperList {
+    gap: 35vw;
+    margin-bottom: 5vw;
+  }
+  
+  #lowerList {
+    gap: 55vw;
+  }
+  #circularPlanet {
+    position: absolute;
+    z-index: 1;
+    align-self: baseline;
+    justify-self: center;
+    margin-top: 17vh;
+  }
+  
+  #circularPlanet img {
+    width: 150vh;
   }
 }
 /* page1 end */
