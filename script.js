@@ -73,6 +73,31 @@ function updateDayIndicator(day) {
 //   }
 // });
 
+// This is the js for event cards
+const div3Elements = document.querySelectorAll('.events .div-3');
+
+div3Elements.forEach(div3 => {
+  const ellipse = div3.querySelector('.ellipse');
+
+  div3.addEventListener('mousemove', (e) => {
+    const rect = div3.getBoundingClientRect();
+    const x = e.clientX - rect.left - ellipse.offsetWidth / 2;
+    const y = e.clientY - rect.top - ellipse.offsetHeight / 2;
+
+    ellipse.style.top = `${y}px`;
+    ellipse.style.left = `${x}px`;
+  });
+
+  div3.addEventListener('mouseleave', () => {
+    ellipse.style.opacity = '0';
+  });
+
+  div3.addEventListener('mouseenter', () => {
+    ellipse.style.opacity = '1';
+  });
+});
+
+
 // Page 6 Js , touch mat krna bkl
 document.addEventListener('DOMContentLoaded', () => {
   const faqs = document.querySelectorAll(".faq");
