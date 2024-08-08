@@ -72,3 +72,24 @@ function updateDayIndicator(day) {
 //     pinSpacing: false
 //   }
 // });
+
+// Page 6 Js , touch mat krna bkl
+document.addEventListener('DOMContentLoaded', () => {
+  const faqs = document.querySelectorAll(".faq");
+
+  faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+      const isActive = faq.classList.contains("active");
+
+      // Close all FAQs
+      faqs.forEach(f => {
+        f.classList.remove("active");
+      });
+
+      // If clicked FAQ wasn't already active, open it
+      if (!isActive) {
+        faq.classList.add("active");
+      }
+    });
+  });
+});

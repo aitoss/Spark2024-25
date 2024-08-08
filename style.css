@@ -28,6 +28,7 @@
 body {
   height: 100%;
   width: 100%;
+  background: #101010;
 }
 
 .main {
@@ -571,10 +572,59 @@ main {
 /* page1 end */
 
 /* page2 started */
-.page2 {
-  min-height: 100vh;
+.page2{
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #101010;
+  /* padding-top: 180px; */
+}
+
+.title2{
+  color: white;
+  
+}
+.WhySpark{
   width: 100%;
   background: #101010;
+}
+
+.questionHeading {
+  font-size: 1rem; /* Adjust size as needed */
+  margin: 0; /* Reset margin if needed */
+}
+
+.faq1{
+  width: 60%;
+  border-bottom: 1px solid #919191;
+  padding: 48px 0;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.questionMain1{
+  width: 100%;
+  /* border: 1px solid red; */
+  color: #919191;
+  display: flex;
+  align-items: center;
+  /* justify-con; */
+}
+.Head1{
+  width: 10%;
+  font-size: 2.2vw;
+}
+.question1{
+  font-size: 2.2vw;
+}
+
+.questionHeading{
+  font-size: 2.2vw;
+  
 }
 /* page2 end */
 
@@ -879,3 +929,189 @@ main {
   height: 100%;
   opacity: 0.75;
 }
+
+/* page 3 ends here */
+
+/* page 6 starts here */
+.page6{
+  background: #101010;
+  color: white;
+}
+
+
+.section1 {
+  font-family: Belfast-sb;
+  /* min-height: 150vh; */
+  width: 100%;
+  margin: 20vh auto;
+  margin-bottom: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size : 8vw;
+  background: linear-gradient(to bottom, #ffffff, #101010); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  font-family: Belfast-sb;
+  margin-bottom: 1rem;
+}
+
+.title2 {
+  font-size: 2vw;
+  font-family: Belfast-sb;
+}
+
+.AllQuestions {
+  margin-top: 5%;
+  width: 100%;
+  color: #919191;
+}
+
+.faq {
+  width: 80%;
+  margin: auto;
+  flex-direction: column; 
+  align-items: center;
+  /* margin-top: 2rem; */
+  cursor: pointer;
+  border-bottom: 2px solid #919191;
+  /* padding-bottom: 1rem; */
+  padding: 4rem 0;
+}
+
+.questionMain {
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between; 
+  /* padding-bottom: 20px; */
+  font-size: 48px;
+}
+
+.questionMain .Head {
+  width: 10%; 
+  text-align: left; 
+}
+
+.questionMain .question {
+  width: 80%; 
+  text-align: center; 
+  /* padding-left: 10%; */
+}
+
+.questionMain i {
+  width: 10%; 
+  text-align: right; 
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease;
+}
+
+
+.Head {
+  font-size: 2vw;
+  margin: 0;
+  transition: transform 1s ease; /* Smooth transition for transform property */
+}
+
+.question h3 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+
+.IconTraingle i {
+  transition: transform 0.6s ease; /* Smooth transition for transform property */
+}
+
+.IconTraingle i.fa-play {
+  right: 0;
+  font-size: 1.2rem;
+  color: #919191;
+  display: inline-block;
+  transform: rotate(90deg);
+  vertical-align: middle;
+  /* margin-left: 100px; */
+}
+
+i.fa-play {
+  font-size: 16px;
+  color: #919191;
+  transform: rotate(90deg);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer p {
+  padding-top: 2.5rem;
+  font-size: 16px;
+  margin-top: 1rem;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  padding-left: 3.5rem;
+  padding-bottom: 20px;
+}
+.faq {
+  color: #919191; /* Default color for text */
+}
+
+
+.faq.active .question h3 {
+  color: #ffffff; /* Color when active */
+}
+
+
+.faq.active .Head {
+  color: #ffffff; /* Color when active */
+  /* transform: translateY(250%); Move downwards */
+}
+
+
+.IconTraingle i {
+  transition: transform 0.6s ease;
+  
+}
+
+.faq.active .IconTraingle i {
+  transform: rotate(270deg); /* Rotate icon when active */
+  /* transform: translateY(450%); */
+  color: white;
+ 
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  padding-bottom: 0; /* Remove extra padding when collapsed */
+}
+
+.faq.active .answer {
+  max-height: 1000px; /* Ensure this value is large enough to fit the content */
+  opacity: 1;
+  color: white;
+  padding-bottom: 1rem; /* Optional: Add padding when expanded */
+}
+
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+svg {
+  transition: transform 0.5s ease-in;
+}
+
+/* page 6 ends here */
