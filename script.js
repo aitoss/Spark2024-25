@@ -1,3 +1,40 @@
+// page1
+const hamburger = document.getElementById('hamburger');
+const navOverlay = document.getElementById('nav-overlay');
+const closeBtn = document.getElementById('close-btn');
+
+hamburger.addEventListener('click', () => {
+    navOverlay.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    navOverlay.classList.remove('active');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
