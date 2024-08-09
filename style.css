@@ -1,5 +1,21 @@
 @font-face {
+<<<<<<< Updated upstream
   font-family: Mona-sans-md;
+=======
+  font-family: Belfast-md;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Medium.ttf);
+}
+@font-face {
+  font-family: Belfast-rg;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Regular.ttfMedium.ttf);
+}
+@font-face {
+  font-family: Belfast-sb;
+  src: url(Utils/Fonts/Belfast\ Grotesk\ Semi\ Bold.ttf);
+}
+@font-face {
+  font-family: Mona-sans-md;Mona-sans-md
+>>>>>>> Stashed changes
   src: url(Utils/Fonts/Mona-Sans-Medium.ttf);
 }
 
@@ -679,6 +695,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap; 
   
 }
 .questionMain1{
@@ -699,6 +716,67 @@ main {
   font-size: 2.2vw;
   
 }
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+  .Head1 {
+    font-size: 3vh;
+  }
+
+  .question1 {
+    font-size: 3vh;
+  }
+
+  .questionHeading {
+    font-size: 3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .Head1 {
+    font-size: 3vh;
+  }
+
+  .question1 {
+    font-size: 4vh;
+  }
+
+  .questionHeading {
+    font-size: 3vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .Head1 {
+    font-size: 2vw;
+  }
+
+  .question1 {
+    font-size: 4vw;
+  }
+
+  .questionHeading {
+    padding-right: 2vh;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 100px) {
+  .Head1 {
+    font-size: 3vh;
+  }
+
+  .question1 {
+    font-size: 3vh;
+  }
+
+  .questionHeading {
+    font-size: 3vh;
+    flex-wrap: wrap;
+  }
+}
+
 /* page2 end */
 
 /* page3 started */
@@ -1428,6 +1506,114 @@ main {
 }
 
 /* page 4 ends here */
+
+/* page 5 starts here */
+
+.page5 {
+  width: 90%;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  margin: auto;
+  /* height: 200vh; Full viewport height to ensure vertical centering */
+}
+
+.team {
+  text-align: center; /* Centers text within the .team container */
+}
+
+.title2 {
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.title {
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+
+.Information{
+  margin-top: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.2vh;
+  color: white;
+}
+
+.position1{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  font-size: 2.2vh;
+}
+
+.Members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 20px; /* Adjust the gap between items as needed */
+  margin-top: 30vh;
+  justify-content: center; /* Center the grid items horizontally */
+  align-items: center; /* Center the grid items vertically */
+  grid-auto-rows: minmax(100px, auto); /* Adjust as needed */
+}
+
+@media (max-width: 1200px) {
+  .Members {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .Members {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Members {
+    grid-template-columns: 1fr; /* 1 column on extra-small screens */
+    justify-content: center;
+    align-items: center;
+  }
+}
+.member {
+  /* font-family: Mona-sans-sb; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%); /* Black and white by default */
+  transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.member img:hover {
+  filter: grayscale(0%); /* Show color on hover */
+}
+
+
+.Informative h3 {
+  margin: 5px 0;
+}
+
+.position1 {
+ font-family:  Belfast-sb;
+  margin-top: 10px;
+}
+
+
+
+/* page 5 ends here */
+
 /* page 6 starts here */
 .page6{
   min-height: 100vh;
