@@ -1,19 +1,8 @@
 @font-face {
-  font-family: Belfast-md;
-  src: url(Utils/Fonts/Belfast\ Grotesk\ Medium.ttf);
-}
-@font-face {
-  font-family: Belfast-rg;
-  src: url(Utils/Fonts/Belfast\ Grotesk\ Regular.ttfMedium.ttf);
-}
-@font-face {
-  font-family: Belfast-sb;
-  src: url(Utils/Fonts/Belfast\ Grotesk\ Semi\ Bold.ttf);
-}
-@font-face {
   font-family: Mona-sans-md;
   src: url(Utils/Fonts/Mona-Sans-Medium.ttf);
 }
+
 @font-face {
   font-family: Mona-sans-sb;
   src: url(Utils/Fonts/Mona-Sans-SemiBold.ttf);
@@ -45,7 +34,6 @@ body {
     url("./Assets/Images/Noise\ &\ Texture.png"),
     radial-gradient(#3d2f2d 0%, #101010 66%);
   background-position: center;
-  /* background-repeat: no-repeat; */
   background-size: cover;
   animation: zoomEffect 100s linear infinite;
   margin: 0;
@@ -158,6 +146,14 @@ header {
 }
 
 /* notes btn */
+.btn-div{
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
 #notes {
   display: flex;
   align-items: center;
@@ -165,7 +161,7 @@ header {
   gap: 0.5rem;
   color: #b2b2b2;
   z-index: 2;
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1rem;
   padding: 1rem 1.1rem;
   border-radius: 0.75rem;
@@ -241,7 +237,7 @@ header ul li {
 
 header ul li a {
   text-decoration: none;
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1rem;
   color: #b2b2b2;
   letter-spacing: 1px;
@@ -331,13 +327,13 @@ main {
 }
 
 #course ul span {
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1rem;
   color: #ffffff;
 }
 
 #course ul span br {
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 0.9rem;
   color: #b4bbb8;
 }
@@ -362,7 +358,7 @@ main {
 
 .landingPageSpark p {
   text-align: center;
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1.25rem;
   color: #b2b2b2;
 }
@@ -380,7 +376,7 @@ main {
   outline: none;
   border: 1px solid #b2b2b2;
   z-index: 10;
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1rem;
 }
 
@@ -395,7 +391,7 @@ main {
 
 /* heading */
 .ossWord {
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   margin-top: 4rem;
   margin-bottom: 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #7f7b7a 100%);
@@ -412,7 +408,7 @@ main {
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   margin: 2rem;
-  font-family: Belfast-md;
+  font-family: Mona-sans-sb;
   font-size: 1rem;
   border: none;
   transition: 0.5s;
@@ -476,9 +472,7 @@ main {
 }
 
 @media (max-width: 992px) {
-  header {
-    
-  }
+  
   header ul {
     display: none;
     width: 100%;
@@ -655,13 +649,12 @@ main {
 
 /* page2 started */
 .page2{
-  /* min-height: 100vh; */
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #101010;
-  /* padding-top: 180px; */
 }
 
 .title2{
@@ -690,11 +683,9 @@ main {
 }
 .questionMain1{
   width: 100%;
-  /* border: 1px solid red; */
   color: #919191;
   display: flex;
   align-items: center;
-  /* justify-con; */
 }
 .Head1{
   width: 10%;
@@ -1015,9 +1006,6 @@ main {
 /* page 3 ends here */
 
 /* Page 4 starts here */
-.page4{
- 
-}
 .events {
   display: flex;
   flex-direction: column;
@@ -1038,7 +1026,7 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-  font-family: "BelfastGrotesk-SemiBold-SemiExpanded", Helvetica;
+  font-family: Mona-sans-md;
   font-weight: 400;
   color: transparent;
   font-size: 128px;
@@ -1108,7 +1096,7 @@ main {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Medium-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 32px;
@@ -1142,7 +1130,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 14px;
@@ -1167,7 +1155,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-Regular", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: transparent;
   font-size: 14px;
@@ -1210,7 +1198,7 @@ main {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 14px;
@@ -1250,7 +1238,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #fc6f41;
   font-size: 12px;
@@ -1263,7 +1251,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
@@ -1275,7 +1263,7 @@ main {
 .events .p {
   position: relative;
   align-self: stretch;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 16px;
@@ -1292,10 +1280,14 @@ main {
   flex: 0 0 auto;
 }
 
+.div-11 a{
+  text-decoration: none;
+}
+
 .events .text-wrapper-8 {
   position: relative;
   width: fit-content;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #fc6f41;
   font-size: 16px;
@@ -1313,10 +1305,6 @@ main {
   /* background-color: #fc6f41; */
   border-radius: 245px/48.5px;
   filter: blur(200px);
-}
-.div-3:hover {
-  border-color: #fc6f41; */
-  border-radius: 8px;; /* Border color on hover */
 }
 
 .div-3::before {
@@ -1385,7 +1373,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Medium-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #ffffff;
   font-size: 20px;
@@ -1430,7 +1418,7 @@ main {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "BelfastGrotesk-Regular-SemiExpanded", Helvetica;
+  font-family: Mona-sans-sb;
   font-weight: 400;
   color: #767676;
   font-size: 20px;
@@ -1442,16 +1430,17 @@ main {
 /* page 4 ends here */
 /* page 6 starts here */
 .page6{
+  min-height: 100vh;
   background: #101010;
   color: white;
+  /* padding-bottom: 1rem; */
 }
 
 
 .section1 {
-  font-family: Belfast-sb;
-  /* min-height: 150vh; */
+  font-family: Mona-sans-sb;
   width: 100%;
-  margin: 20vh auto;
+  margin: 0vh auto;
   margin-bottom: 30vh;
   display: flex;
   flex-direction: column;
@@ -1464,13 +1453,13 @@ main {
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
   background-clip: text;
-  font-family: Belfast-sb;
+  font-family: Mona-sans-md;
   margin-bottom: 1rem;
 }
 
 .title2 {
   font-size: 2vw;
-  font-family: Belfast-sb;
+  font-family: Mona-sans-md;
 }
 
 .AllQuestions {
@@ -1621,6 +1610,101 @@ i.fa-play {
 svg {
   transition: transform 0.5s ease-in;
 }
-
 /* page 6 ends here */
 
+/* page7 */
+.page7{
+  min-height: 100vh;
+  width: 100%;
+}
+/* page7 end */
+
+/* footer */
+.footer{
+  height: 100vh;
+  width: 100%;
+  background: url("./Assets/Images/spots.png"),
+    url("./Assets/Images/Noise\ &\ Texture.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 9;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.footer-top{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2vw;
+}
+
+.footer-left h4{
+  font-family: Mona-sans-md;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.footer-right{
+  display: flex;
+  gap: 8vw;
+}
+
+.footer-right ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.footer-right .footer-nav li, .links li{
+  list-style: none;
+  font-family: Mona-sans-md;
+  font-size: 1.2rem;
+}
+
+.footer-right .footer-nav li a, .links li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-bottom{
+  height: 50vh;
+  width: 90%;
+}
+
+.email {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3vw;
+}
+
+.email h4{
+  font-family: Mona-sans-md;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.footer-bottom h1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom h1 span{
+  font-family: Mona-sans-md;
+  display: inline-block;
+  font-weight: 100;
+  font-size: 22vw;
+  line-height: 100%;
+  background: linear-gradient(180deg, #FF812A 0%, #E13E00 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
