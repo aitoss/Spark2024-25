@@ -73,7 +73,7 @@ function updateDayIndicator(day) {
 // });
 
 // This is the js for event cards
-const div3Elements = document.querySelectorAll('.events .div-3');
+// const div3Elements = document.querySelectorAll('.events .div-3');
 
 div3Elements.forEach(div3 => {
   const ellipse = div3.querySelector('.ellipse');

@@ -1041,21 +1041,25 @@ main {
   font-family: "BelfastGrotesk-SemiBold-SemiExpanded", Helvetica;
   font-weight: 400;
   color: transparent;
-  font-size: 128px;
+  font-size: 10vh; /* Responsive font size based on viewport height */
+  min-height: 100px; /* Ensure a minimum font size for smaller screens */
   text-align: center;
   letter-spacing: 0;
-  line-height: 160px;
+  line-height: 1.25em; /* Adjusted line height */
 }
+
 
 .events .div {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 84px;
+  padding: 0px 20px; /* Reduced padding for better responsiveness */
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
+  flex-wrap: wrap; /* Allows wrapping of the cards */
+  justify-content: center; /* Centers the cards when wrapped */
 }
 
 .events .div-2 {
@@ -1315,7 +1319,7 @@ main {
   filter: blur(200px);
 }
 .div-3:hover {
-  border-color: #fc6f41; */
+  /* border-color: #fc6f41; */ */
   border-radius: 8px;; /* Border color on hover */
 }
 
@@ -1340,7 +1344,7 @@ main {
   position: absolute;
   width: 490px;
   height: 97px;
-  background-color: #fc6f41;
+  /* background-color: #fc6f41; */
   border-radius: 245px / 48.5px;
   filter: blur(200px);
   pointer-events: none;
@@ -1376,6 +1380,10 @@ main {
   border-color: #494949;
   backdrop-filter: blur(4px) brightness(100%);
   -webkit-backdrop-filter: blur(4px) brightness(100%);
+}
+
+.events .div-11 a{
+  text-decoration: none;
 }
 .div-11:hover {
   background-color:transparent; /* Background color on hover */
