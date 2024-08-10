@@ -110,23 +110,19 @@ const div3Elements = document.querySelectorAll(".events .div-3");
 div3Elements.forEach((div3) => {
   const ellipse = div3.querySelector(".ellipse");
 
-  div3.addEventListener("mousemove", (e) => {
-    const rect = div3.getBoundingClientRect();
-    const x = e.clientX - rect.left - ellipse.offsetWidth / 2;
-    const y = e.clientY - rect.top - ellipse.offsetHeight / 2;
+  // Set the position of the ellipse to be at the bottom center
+  ellipse.style.top = 'calc(100% - 48.5px)'; // Adjust the position to be at the bottom
+  ellipse.style.left = 'calc(50% - 245px)'; // Center horizontally
 
-    ellipse.style.top = `${y}px`;
-    ellipse.style.left = `${x}px`;
+  div3.addEventListener("mouseenter", () => {
+    ellipse.style.opacity = "1";
   });
 
   div3.addEventListener("mouseleave", () => {
     ellipse.style.opacity = "0";
   });
-
-  div3.addEventListener("mouseenter", () => {
-    ellipse.style.opacity = "1";
-  });
 });
+
 
 // Page 6 Js
 document.addEventListener("DOMContentLoaded", () => {
@@ -222,3 +218,4 @@ document.getElementById("getStarted").addEventListener("click", () => {
 document.getElementById("oss").addEventListener("click", () => {
   window.open("https://aitoss.club/", "_blank");
 });
+
