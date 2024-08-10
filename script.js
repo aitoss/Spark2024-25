@@ -1,21 +1,16 @@
-// // Codepen
-// gsap.registerPlugin(ScrollTrigger);
-// // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
 // const locoScroll = new LocomotiveScroll({
 //   el: document.querySelector(".main"),
 //   smooth: true,
 // });
-// //each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
 // locoScroll.on("scroll", ScrollTrigger.update);
 
-// // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
 // ScrollTrigger.scrollerProxy(".main", {
 //   scrollTop(value) {
 //     return arguments.length
 //       ? locoScroll.scrollTo(value, 0, 0)
 //       : locoScroll.scroll.instance.scroll.y;
-//   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+//   },
 //   getBoundingClientRect() {
 //     return {
 //       top: 0,
@@ -24,16 +19,12 @@
 //       height: window.innerHeight,
 //     };
 //   },
-//   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
 //   pinType: document.querySelector(".main").style.transform
 //     ? "transform"
 //     : "fixed",
 // });
 
-// // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
 // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 // ScrollTrigger.refresh();
 
 // nav-overlay
@@ -65,6 +56,7 @@ hamburger.addEventListener("click", () => {
   });
 });
 closeBtn.addEventListener("click", () => {
+  overlay.style.width = "0";
   overlay.style.width = "0";
   overlay.style.opacity = "0";
   // document.body.style.height = "100%";
@@ -198,20 +190,17 @@ document.addEventListener("DOMContentLoaded", () => {
 //   delay: 2,
 // });
 
-// Scroll to animations
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent the default anchor behavior
-
+    e.preventDefault();
     const targetSection = document.querySelector(this.getAttribute("href"));
-
-    // Scroll to the section smoothly
     window.scrollTo({
       top: targetSection.offsetTop,
       behavior: "smooth",
     });
   });
 });
+
 const tlPage = document.querySelector(".page3");
 document.getElementById("getStarted").addEventListener("click", () => {
   window.scrollTo({
