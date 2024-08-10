@@ -493,6 +493,26 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.breathe{
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  opacity: 2;
+}
+
+.breathe img{
+  width: 50vw;
+  animation: planetBreatheEffect 5s infinite alternate ease-in-out;
+}
+
+@keyframes planetBreatheEffect{
+  0%{
+    scale: 0;
+  }
+  100%{
+    scale: 6;
+  }
+}
 
 
 /* page1 end */
@@ -629,9 +649,8 @@ body.no-scroll {
   margin-top: 1rem;
   font-family: Mona-sans-md;
   font-size: 8vw;
-  font-weight: lighter;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #7f7b7a 100%);
+  background: linear-gradient(180deg, #ffffff, #101010);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -886,7 +905,7 @@ body.no-scroll {
   font-family: Mona-sans-md;
   font-weight: 400;
   color: transparent;
-  font-size: 10vh; /* Responsive font size based on viewport height */
+  font-size: 8vw; /* Responsive font size based on viewport height */
   min-height: 100px; /* Ensure a minimum font size for smaller screens */
   text-align: center;
   letter-spacing: 0;
