@@ -1665,7 +1665,7 @@ body.no-scroll {
   cursor: pointer;
   border-bottom: 2px solid #919191;
   /* padding-bottom: 1rem; */
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .questionMain {
@@ -1732,7 +1732,7 @@ i.fa-play {
 .question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:baseline;
 }
 
 .answer p {
@@ -1821,7 +1821,6 @@ svg {
   justify-content: space-between;
   align-items: center;
   color: white;
-  transition: ease-in-out 0.5s;
 }
 
 .footer-top {
@@ -1901,7 +1900,7 @@ svg {
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
-    height: 90vh;
+    height: 100vh;
   }
   #circularPlanet{
     margin-top: 20rem;
@@ -1984,6 +1983,10 @@ svg {
   .question h3 {
     font-size: 3vw;
   }
+  .Head, .question h3 {
+    font-size: 7vh;
+    /* justify-content: ; */
+}
 }
 
 @media (max-width: 576px) {
@@ -2047,5 +2050,19 @@ svg {
   }
   .idv-card{
     width: 380px;
+  }
+  
+  .Head1, .questionHeading {
+    font-size: 4.3vw;
+}
+}
+
+@media (max-width: 768px) {
+  .Head, .question h3 {
+      font-size: 1.2rem;
+  }
+
+  .Head, .question .answer {
+      font-size: 0.8rem;
   }
 }
