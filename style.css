@@ -23,6 +23,7 @@ body {
   height: 100%;
   width: 100%;
   background: #101010;
+  overflow-x: hidden;
 }
 
 .main {
@@ -1784,9 +1785,12 @@ svg {
     margin-bottom: 1rem;
   }
   .page2{
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
   #course .upper ul li::marker, #course .upper p, #course .lower ul li::marker, #course .lower p{
     font-size: 0.8rem;
+  }
+  .idv-card{
+    width: 380px;
   }
 }
