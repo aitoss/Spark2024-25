@@ -413,15 +413,16 @@ main {
 .nav-overlay{
   height: 90vh;
   background: #101010;
-  width: 100%;
+  width: 0;
   position: absolute;
-  left: 100%;
+  right: 0;
   z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transition: ease-in-out 0.5s;
+  opacity: 0;
 }
 
 .overlay-top{
@@ -488,6 +489,9 @@ main {
 body.no-scroll {
   overflow: hidden;
 }
+
+
+
 /* page1 end */
 
 /* page2 started */
@@ -1701,7 +1705,7 @@ body.no-scroll {
   cursor: pointer;
   border-bottom: 2px solid #919191;
   /* padding-bottom: 1rem; */
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .questionMain {
@@ -1728,7 +1732,7 @@ body.no-scroll {
 .questionMain i {
   width: 10%;
   text-align: right;
-  font-size: 20px;
+  font-size: 2vh;
   align-items: center;
   justify-content: center;
   transition: transform 1s ease;
@@ -1768,12 +1772,12 @@ i.fa-play {
 .question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:baseline;
 }
 
 .answer p {
   padding-top: 2.5rem;
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   margin-top: 1rem;
   text-align: left;
   width: 80%;
@@ -1827,6 +1831,11 @@ svg {
   transition: transform 0.5s ease-in;
 }
 
+@media (max-width: 480px) {
+  .answer{
+    font-size: .5vh;
+  }
+}
 /* page 6 ends here */
 
 /* page7 */
@@ -1852,7 +1861,6 @@ svg {
   justify-content: space-between;
   align-items: center;
   color: white;
-  transition: ease-in-out 0.5s;
 }
 
 .footer-top {
@@ -1932,7 +1940,7 @@ svg {
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
-    height: 90vh;
+    height: 100vh;
   }
   #circularPlanet{
     margin-top: 20rem;
@@ -2015,6 +2023,10 @@ svg {
   .question h3 {
     font-size: 3vw;
   }
+  .Head, .question h3 {
+    font-size: 7vh;
+    /* justify-content: ; */
+}
 }
 
 @media (max-width: 576px) {
@@ -2078,5 +2090,19 @@ svg {
   }
   .idv-card{
     width: 380px;
+  }
+  
+  .Head1, .questionHeading {
+    font-size: 4.3vw;
+}
+}
+
+@media (max-width: 768px) {
+  .Head, .question h3 {
+      font-size: 1.2rem;
+  }
+
+  .Head, .question .answer {
+      font-size: 0.8rem;
   }
 }
