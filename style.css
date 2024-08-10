@@ -1859,10 +1859,10 @@ svg {
     height: 90vh;
   }
   #circularPlanet{
-    margin-top: 15rem;
+    scale: 1.2;
   }
   .landingPageSpark{
-    margin-top: 24rem;
+    margin-top: 16rem;
   }
   .page1 header {
     width: 95%;
@@ -1945,7 +1945,7 @@ svg {
     height: 80vh;
   }
   #circularPlanet{
-    margin-top: 16rem;
+    scale: 1.2;
   }
   #lowerList {
     gap: 70vw;
@@ -1954,7 +1954,7 @@ svg {
     margin-bottom: 3rem;
   }
   .landingPageSpark {
-    margin-top: 20rem;
+    margin-top: 16rem;
   }
   .page3 .page3-heading h1 {
     font-weight: bold;
@@ -1975,11 +1975,11 @@ svg {
     height: 80vh;
   }
   #circularPlanet{
-    margin-top: 24rem;
+    scale: 1.5;
   }
   .landingPageSpark{
     width: 100%;
-    margin-top: 26rem;
+    margin-top: 16rem;
   }
   .landingPageSpark p{
     font-size: 0.6rem;
