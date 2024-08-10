@@ -1859,6 +1859,7 @@ svg {
     height: 90vh;
   }
   #circularPlanet{
+    margin-top: 10rem;
     scale: 1.2;
   }
   .landingPageSpark{
@@ -1975,6 +1976,7 @@ svg {
     height: 80vh;
   }
   #circularPlanet{
+    margin-top: 8rem;
     scale: 1.5;
   }
   .landingPageSpark{
