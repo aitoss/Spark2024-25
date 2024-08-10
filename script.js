@@ -66,36 +66,55 @@ closeBtn.addEventListener("click", () => {
 });
 
 // timeline
-const dayIndicator = document.getElementById("day-indicator");
-const cards = document.querySelectorAll(".idv-card");
+// const dayIndicator = document.getElementById("day-indicator");
+// const cards = document.querySelectorAll(".idv-card");
 
-cards.forEach((card, index) => {
-  ScrollTrigger.create({
-    trigger: card,
-    start: "top center",
-    end: "bottom center",
-    onEnter: () => updateDayIndicator(index + 1),
-    onEnterBack: () => updateDayIndicator(index + 1),
+// cards.forEach((card, index) => {
+//   ScrollTrigger.create({
+//     trigger: card,
+//     start: "top center",
+//     end: "bottom center",
+//     onEnter: () => updateDayIndicator(index + 1),
+//     onEnterBack: () => updateDayIndicator(index + 1),
+//   });
+// });
+
+// function updateDayIndicator(day) {
+//   dayIndicator.textContent = `DAY ${day}`;
+// }
+
+// gsap.to("#day-indicator", {
+//   // transform: "translate(-50%, 0 )",
+//   scrollTrigger: {
+//     trigger: ".page3",
+//     scroller: ".cards-container",
+//     start: "top top",
+//     end: "bottom bottom",
+//     duration: 12,
+//     // markers: true,
+//     scrub: 2,
+//     // pin: true,
+//     pinSpacing: false,
+//   },
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.close-btn');
+  
+  hamburger.addEventListener('click', function () {
+    navOverlay.style.width = '100%';  // Expand the overlay
+    navOverlay.style.opacity = '1';   // Make the overlay visible
+    document.body.classList.add('no-scroll'); // Prevent body scrolling
   });
-});
 
-function updateDayIndicator(day) {
-  dayIndicator.textContent = `DAY ${day}`;
-}
-
-gsap.to("#day-indicator", {
-  // transform: "translate(-50%, 0 )",
-  scrollTrigger: {
-    trigger: ".page3",
-    scroller: ".cards-container",
-    start: "top top",
-    end: "bottom bottom",
-    duration: 12,
-    // markers: true,
-    scrub: 2,
-    // pin: true,
-    pinSpacing: false,
-  },
+  closeBtn.addEventListener('click', function () {
+    navOverlay.style.width = '0';      // Collapse the overlay
+    navOverlay.style.opacity = '0';    // Hide the overlay
+    document.body.classList.remove('no-scroll'); // Allow body scrolling
+  });
 });
 
 // Events Section

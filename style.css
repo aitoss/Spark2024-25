@@ -191,6 +191,7 @@ header ul li a:hover {
 
 /* main start */
 main {
+
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -414,7 +415,8 @@ main {
   height: 90vh;
   background: #101010;
   width: 0;
-  position: absolute;
+  top: 0;
+  position: fixed;
   right: 0;
   z-index: 10;
   display: flex;
@@ -1882,6 +1884,7 @@ footer {
 .footer-right {
   display: flex;
   gap: 8vw;
+  flex-wrap: wrap; /* Allow wrapping if necessary */
 }
 
 .footer-right ul {
@@ -1939,6 +1942,73 @@ footer {
   -webkit-background-clip: text;
 }
 
+/* responsive styles for footer */
+/* Mobile View Media Queries */
+@media (max-width: 768px) {
+  .footer {
+    /* width: 0%; */
+    height: 100%; /* Adjust based on content */
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+    background-size: contain; /* Adjust background size */
+  }
+
+  .footer-top {
+    /* flex-direction: column; */
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+
+  .footer-left {
+    margin-bottom: 20px;
+  }
+
+  .footer-right {
+    /* flex-direction: column; */
+    gap: 5vw; /* Adjust gap for smaller screens */
+  }
+
+  .footer-right ul {
+    gap: 2vw; /* Adjust gap between list items */
+  }
+
+  .footer-right .footer-nav li,
+  .links li {
+    font-size: 1.5rem; /* Adjust font size for list items */
+  }
+
+  .footer-bottom {
+    height: auto; /* Adjust height based on content */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-bottom h1 {
+    font-size: 12vw; /* Adjust font size for headings */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+
+  .footer-top {
+    font-size: 5vw; /* Adjust font size for very small screens */
+  }
+
+  .footer-right {
+    gap: 4vw; /* Adjust gap for very small screens */
+  }
+
+  .footer-right .footer-nav li,
+  .links li {
+    font-size: 1.2rem; /* Adjust font size for list items */
+  }
+
+  .footer-bottom h1 {
+    font-size: 10vw; /* Adjust font size for headings */
+  }
+}
+
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
@@ -1970,15 +2040,6 @@ footer {
   .orange-divider,
   .nav-pointer {
     display: none;
-  }
-  .answer p{
-    font-size: 1rem;
-  }
-  .footer-left h4{
-    font-size: 1rem;
-  }
-  .footer-right .footer-nav li a, .links li a{
-    font-size: 1rem;
   }
 }
 
@@ -2068,9 +2129,6 @@ footer {
   .answer p{
     font-size: 0.6rem;
     padding-left: 0;
-  }
-  .footer{
-    width: 60%;
   }
   .footer-top{
     flex-direction: column;
