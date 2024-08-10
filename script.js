@@ -43,11 +43,12 @@ const closeBtn = document.querySelector(".close-btn");
 const main = document.querySelector(".main");
 const footer = document.querySelector("footer");
 hamburger.addEventListener("click", () => {
-  overlay.style.left = "0%";
-  document.body.style.height = "90vh";
-  document.body.style.overflowY = "hidden";
-  main.style.height = "0";
-  footer.style.opacity = "0";
+  overlay.style.width = "100%";
+  overlay.style.opacity = "1";
+  // document.body.style.height = "90vh";
+  // document.body.style.overflowY = "hidden";
+  // main.style.height = "0";
+  // footer.style.opacity = "0";
   gsap.from(".overlay-nav a", {
     x: 120,
     opacity: 0,
@@ -64,11 +65,12 @@ hamburger.addEventListener("click", () => {
   });
 });
 closeBtn.addEventListener("click", () => {
-  overlay.style.left = "100%";
-  document.body.style.height = "100%";
-  document.body.style.overflowY = "";
-  main.style.height = "";
-  footer.style.opacity = "1";
+  overlay.style.right = "0";
+  overlay.style.opacity = "0";
+  // document.body.style.height = "100%";
+  // document.body.style.overflowY = "";
+  // main.style.height = "";
+  // footer.style.opacity = "1";
 });
 
 // timeline
