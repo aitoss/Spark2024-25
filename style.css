@@ -895,13 +895,13 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 20px; /* Reduced padding for better responsiveness */
+  padding: 0px 20px; 
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  flex-wrap: wrap; /* Allows wrapping of the cards */
-  justify-content: center; /* Centers the cards when wrapped */
+  flex-wrap: wrap; 
+  justify-content: center; 
 }
 
 .events .div-2 {
@@ -1154,16 +1154,6 @@ body.no-scroll {
   white-space: nowrap;
 }
 
-.ellipse {
-  position: absolute;
-  width: 490px;
-  height: 97px;
-  top: 445px;
-  left: -13px;
-  /* background-color: #fc6f41; */
-  border-radius: 245px/48.5px;
-  filter: blur(200px);
-}
 
 .div-3::before {
   content: "";
@@ -1186,16 +1176,14 @@ body.no-scroll {
   position: absolute;
   width: 490px;
   height: 97px;
-  /* background-color: #fc6f41; */
+  background-color: #fc6f41;
   border-radius: 245px / 48.5px;
   filter: blur(200px);
   pointer-events: none;
-  transition: top 0.3s, left 0.3s; /* Smooth transition for ellipse position */
+  transition: top 0.3s, left 0.3s, opacity 0.3s; /* Smooth transition for ellipse position and opacity */
+  opacity: 0; /* Initially invisible */
 }
 
-.div-3:hover .ellipse {
-  opacity: 1;
-}
 .events .div-10 {
   display: flex;
   align-items: flex-start;
@@ -1289,39 +1277,91 @@ body.no-scroll {
   white-space: nowrap;
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
   .events {
-    gap: 60px; /* Reduce gap between sections */
-    padding: 10vh 0; /* Reduce padding */
+    padding: 10vh 0;
+    gap: 60px;
+  }
+
+  .events .div-2, 
+  .events .div-12 {
+    width: 100%; /* Make the cards take the full width */
+    padding: 0 10px; /* Add some padding for breathing space */
+  }
+
+  .events .div-3 {
+    padding: 16px;
   }
 
   .events .text-wrapper {
     font-size: 8vh; /* Adjust font size */
     min-height: 80px; /* Adjust minimum height */
   }
-
-  .events .div {
-    flex-direction: column; /* Stack cards vertically */
-    gap: 15px; /* Reduce gap between cards */
-  }
 }
 
-/* Media Query for very small screens */
 @media (max-width: 480px) {
   .events {
-    gap: 40px; /* Further reduce gap between sections */
-    padding: 5vh 0; /* Further reduce padding */
+    padding: 5vh 0;
+    gap: 40px;
+  }
+
+  .events .div-2, 
+  .events .div-12 {
+    width: 100%; /* Ensure the card width is 100% */
+    padding: 0 8px; /* Reduce padding to fit smaller screens */
+  }
+
+  .events .div-3 {
+    padding: 12px; /* Reduce padding to prevent overflow */
   }
 
   .events .text-wrapper {
-    font-size: 6vh; /* Further adjust font size */
-    min-height: 60px; /* Further adjust minimum height */
+    font-size: 6vh; /* Further reduce font size */
+    min-height: 60px; /* Adjust minimum height */
   }
 
-  .events .div {
-    padding: 0px 10px; /* Further reduce padding */
-    gap: 10px; /* Further reduce gap between cards */
+  .events .div-wrapper, 
+  .events .div-wrapper-2 {
+    padding: 12px 8px; /* Adjust padding inside div wrappers */
+  }
+
+  .events .text-wrapper-9, 
+  .events .text-wrapper-10 {
+    font-size: 16px; /* Decrease text size */
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .events {
+    padding: 5vh 0;
+    gap: 30px;
+  }
+
+  .events .div-2, 
+  .events .div-12 {
+    width: 100%; /* Full width for cards */
+    padding: 0 5px; /* Further reduce padding */
+  }
+
+  .events .div-3 {
+    padding: 10px; /* Further reduce padding to avoid overflow */
+  }
+
+  .events .text-wrapper {
+    font-size: 5vh; /* Smaller font size for very small screens */
+    min-height: 50px; /* Reduce minimum height */
+  }
+
+  .events .div-wrapper, 
+  .events .div-wrapper-2 {
+    padding: 10px 5px; /* Compact padding */
+  }
+
+  .events .text-wrapper-9, 
+  .events .text-wrapper-10 {
+    font-size: 14px; /* Even smaller text size */
+    line-height: 18px;
   }
 }
 
