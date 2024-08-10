@@ -56,7 +56,7 @@ hamburger.addEventListener("click", () => {
   });
 });
 closeBtn.addEventListener("click", () => {
-  overlay.style.right = "0";
+  overlay.style.width = "0";
   overlay.style.opacity = "0";
   // document.body.style.height = "100%";
   // document.body.style.overflowY = "";
