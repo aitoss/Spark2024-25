@@ -1287,6 +1287,42 @@ body.no-scroll {
   white-space: nowrap;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .events {
+    gap: 60px; /* Reduce gap between sections */
+    padding: 10vh 0; /* Reduce padding */
+  }
+
+  .events .text-wrapper {
+    font-size: 8vh; /* Adjust font size */
+    min-height: 80px; /* Adjust minimum height */
+  }
+
+  .events .div {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Reduce gap between cards */
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .events {
+    gap: 40px; /* Further reduce gap between sections */
+    padding: 5vh 0; /* Further reduce padding */
+  }
+
+  .events .text-wrapper {
+    font-size: 6vh; /* Further adjust font size */
+    min-height: 60px; /* Further adjust minimum height */
+  }
+
+  .events .div {
+    padding: 0px 10px; /* Further reduce padding */
+    gap: 10px; /* Further reduce gap between cards */
+  }
+}
+
 /* page 4 ends here */
 
 /* page 5 starts here */
