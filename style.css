@@ -451,6 +451,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4vw;
+  width: 0;
 }
 .overlay-nav a{
   color: white;
@@ -1685,8 +1686,7 @@ body.no-scroll {
 
 .questionMain .question {
   width: 80%;
-  text-align: center;
-  /* padding-left: 10%; */
+  text-align: left;
 }
 
 .questionMain i {
@@ -1737,13 +1737,15 @@ i.fa-play {
 
 .answer p {
   padding-top: 2.5rem;
-  font-size: 2.5vh;
+  font-size: 1.2rem;
+  font-weight: lighter;
   margin-top: 1rem;
   text-align: left;
   width: 80%;
   margin: auto;
   padding-left: 3.5rem;
   padding-bottom: 20px;
+  line-height: 1.5;
 }
 .faq {
   color: #919191; /* Default color for text */
@@ -1806,7 +1808,7 @@ svg {
 /* page7 end */
 
 /* footer */
-.footer {
+footer {
   height: 100vh;
   width: 100%;
   background: url("./Assets/Images/spots.png"),
@@ -1828,8 +1830,8 @@ svg {
   width: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-size: 2vw;
+  margin-top: 3vw;
 }
 
 .footer-left h4 {
@@ -1864,7 +1866,7 @@ svg {
 }
 
 .footer-bottom {
-  height: 50vh;
+  /* height: 50vh; */
   width: 90%;
 }
 
@@ -1930,6 +1932,15 @@ svg {
   .nav-pointer {
     display: none;
   }
+  .answer p{
+    font-size: 1rem;
+  }
+  .footer-left h4{
+    font-size: 1rem;
+  }
+  .footer-right .footer-nav li a, .links li a{
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1984,6 +1995,9 @@ svg {
   .question h3 {
     font-size: 3vw;
   }
+  .answer p{
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2011,6 +2025,24 @@ svg {
   }
   .page5-top h1{
     font-weight: bold;
+  }
+  .answer p{
+    font-size: 0.6rem;
+    padding-left: 0;
+  }
+  .footer{
+    width: 60%;
+  }
+  .footer-top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .footer-left h4{
+    font-size: 0.8rem;
+  }
+  .footer-right .footer-nav li a, .links li a{
+    font-size: 0.8rem;
   }
 }
 
