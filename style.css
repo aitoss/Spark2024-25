@@ -488,6 +488,9 @@ main {
 body.no-scroll {
   overflow: hidden;
 }
+
+
+
 /* page1 end */
 
 /* page2 started */
@@ -1652,7 +1655,7 @@ body.no-scroll {
 .questionMain i {
   width: 10%;
   text-align: right;
-  font-size: 20px;
+  font-size: 2vh;
   align-items: center;
   justify-content: center;
   transition: transform 1s ease;
@@ -1697,7 +1700,7 @@ i.fa-play {
 
 .answer p {
   padding-top: 2.5rem;
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   margin-top: 1rem;
   text-align: left;
   width: 80%;
@@ -1751,6 +1754,11 @@ svg {
   transition: transform 0.5s ease-in;
 }
 
+@media (max-width: 480px) {
+  .answer{
+    font-size: .5vh;
+  }
+}
 /* page 6 ends here */
 
 /* page7 */
