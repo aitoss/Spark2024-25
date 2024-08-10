@@ -21,7 +21,7 @@
 
 body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   background: #101010;
   overflow-x: hidden;
 }
@@ -29,11 +29,12 @@ body {
 .main {
   position: relative;
   z-index: 10;
+  transition: ease-in-out 0.5s;
 }
 
 /* page1 started */
 .page1 {
-  height: 115vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   background: url("./Assets/Images/spots.png"),
@@ -410,7 +411,7 @@ main {
 }
 
 .nav-overlay{
-  height: 100vh;
+  height: 90vh;
   background: #101010;
   width: 100%;
   position: absolute;
@@ -453,7 +454,7 @@ main {
 .overlay-nav a{
   color: white;
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 5vw;
   font-family: Mona-sans-md;
 }
 
@@ -477,11 +478,11 @@ main {
   text-decoration: none;
   color: white;
   font-family: Mona-sans-md;
-  font-size: 2vw;
+  font-size: 4vw;
 }
 
 .overlay-bottom ul li a img{
-  height: 2vw;
+  height: 4vw;
 }
 
 body.no-scroll {
@@ -497,6 +498,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   background: #101010;
+  padding-top: 10vh;
 }
 
 .title2 {
@@ -1469,6 +1471,7 @@ body.no-scroll {
     filter: grayscale(100%); /* Default to black and white */
     transition: filter 0.3s ease; /* Smooth transition */
     margin-bottom: 1vw; /* Space below image */
+    object-fit: cover;
   }
 
   .name-git {
@@ -1773,6 +1776,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   color: white;
+  transition: ease-in-out 0.5s;
 }
 
 .footer-top {
@@ -1852,7 +1856,13 @@ svg {
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
-    height: 70vh;
+    height: 90vh;
+  }
+  #circularPlanet{
+    margin-top: 15rem;
+  }
+  .landingPageSpark{
+    margin-top: 24rem;
   }
   .page1 header {
     width: 95%;
@@ -1882,6 +1892,9 @@ svg {
   }
   .btn-div {
     gap: 5vw;
+  }
+  #notes{
+    display: none;
   }
   .hamburger {
     display: flex;
@@ -1929,7 +1942,10 @@ svg {
 
 @media (max-width: 576px) {
   .page1 {
-    height: 60vh;
+    height: 80vh;
+  }
+  #circularPlanet{
+    margin-top: 16rem;
   }
   #lowerList {
     gap: 70vw;
@@ -1938,7 +1954,7 @@ svg {
     margin-bottom: 3rem;
   }
   .landingPageSpark {
-    margin-top: 10rem;
+    margin-top: 20rem;
   }
   .page3 .page3-heading h1 {
     font-weight: bold;
@@ -1956,11 +1972,14 @@ svg {
     margin-bottom: 1rem;
   }
   .page1{
-    height: 60vh;
+    height: 80vh;
+  }
+  #circularPlanet{
+    margin-top: 24rem;
   }
   .landingPageSpark{
     width: 100%;
-    margin-top: 12rem;
+    margin-top: 26rem;
   }
   .landingPageSpark p{
     font-size: 0.6rem;

@@ -40,8 +40,14 @@ ScrollTrigger.refresh();
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
 const closeBtn = document.querySelector(".close-btn");
+const main = document.querySelector(".main");
+const footer = document.querySelector("footer");
 hamburger.addEventListener("click", () => {
   overlay.style.left = "0%";
+  document.body.style.height = "90vh";
+  document.body.style.overflowY = "hidden";
+  main.style.height = "0";
+  footer.style.opacity = "0";
   gsap.from(".overlay-nav a", {
     x: 120,
     opacity: 0,
@@ -59,6 +65,10 @@ hamburger.addEventListener("click", () => {
 });
 closeBtn.addEventListener("click", () => {
   overlay.style.left = "100%";
+  document.body.style.height = "100%";
+  document.body.style.overflowY = "";
+  main.style.height = "";
+  footer.style.opacity = "1";
 });
 
 // timeline
