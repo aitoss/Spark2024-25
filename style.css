@@ -432,13 +432,17 @@ main {
 }
 
 .overlay-top img{
-  height: 10vw;
+  height: 6vw;
 }
 
 .overlay-top .close-btn{
   font-family: Mona-sans-md;
-  font-size: 6vw;
+  font-size: 3vw;
   color: white;
+}
+
+.close-btn{
+   cursor: pointer;
 }
 
 .overlay-nav{
@@ -449,7 +453,7 @@ main {
 .overlay-nav a{
   color: white;
   text-decoration: none;
-  font-size: 10vw;
+  font-size: 3vw;
   font-family: Mona-sans-md;
 }
 
@@ -459,7 +463,7 @@ main {
 
 .overlay-bottom ul{
   width: 90%;
-  margin: 6vw auto;
+  margin: 1vw auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -473,11 +477,15 @@ main {
   text-decoration: none;
   color: white;
   font-family: Mona-sans-md;
-  font-size: 4vw;
+  font-size: 2vw;
 }
 
 .overlay-bottom ul li a img{
-  height: 5vw;
+  height: 2vw;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 /* page1 end */
 
@@ -1567,9 +1575,10 @@ main {
 
 /* page 6 starts here */
 .page6 {
-  min-height: 100vh;
+  min-height: 110vh;
   background: #101010;
   color: white;
+  padding-bottom: 5vh;
   /* padding-bottom: 1rem; */
 }
 
@@ -1685,7 +1694,7 @@ i.fa-play {
 
 .answer p {
   padding-top: 2.5rem;
-  font-size: 16px;
+  font-size: 1.5vh;
   margin-top: 1rem;
   text-align: left;
   width: 80%;
@@ -1738,6 +1747,7 @@ i.fa-play {
 svg {
   transition: transform 0.5s ease-in;
 }
+
 /* page 6 ends here */
 
 /* page7 */
