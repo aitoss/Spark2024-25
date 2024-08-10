@@ -1946,6 +1946,7 @@ svg {
     height: 80vh;
   }
   #circularPlanet{
+    margin-top: 10rem;
     scale: 1.2;
   }
   #lowerList {
