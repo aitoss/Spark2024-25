@@ -29,48 +29,47 @@
 </head>
 <body>
     <div class="main">
+      
+      <div class="nav-overlay">
+        <div class="overlay-top">
+          <img src="Assets/Images/spark-logo.svg" alt="">
+          <div class="close-btn">Close X</div>
+        </div>
+        <div class="overlay-nav">
+          <a href="">Home</a>
+          <a href="">Schedule</a>
+          <a href="">Mentors</a>
+          <a href="">Events</a>
+          <a href="">FAQs</a>
+        </div>
+        <div class="overlay-bottom">
+          <ul>
+            <li><a href=""><p>Instagram</p><img src="Assets/Images/akar-icons_link-out.svg" alt=""></a></li>
+            <li><a href=""><p>LinkedIn</p><img src="Assets/Images/akar-icons_link-out.svg" alt=""></a></li>
+            <li><a href=""><p>Notes</p><img src="Assets/Images/akar-icons_link-out.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
       <!-- hero section -->
         <div class="page1">
           <header>
             <button id="sparkLogo"><img src="./Assets/Images/logo.svg" alt="Spark"></button>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="#">Mentors</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li class="home"><a href=".page1">Home</a></li>
+                    <li class="schedule"><a href=".page3">Schedule</a></li>
+                    <li class="mentors"><a href=".page5">Mentors</a></li>
+                    <li class="events-nav"><a href=".page4">Events</a></li>
+                    <li class="faqs"><a href=".page6">FAQs</a></li>
                 </ul>
             </nav>
             
-            <div class="btn-div"><button id="notes"><p>Notes</p><span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button> </div>
-
-          <div id="nav-overlay">
-            <div class="phoneUpperNav">
-              <button id="sparkLogo"><img src="./Assets/Images/logo.svg" alt="Spark"></button>
-              <button id="close-btn"><i class="ri-close-line"></i></button>
+            <div class="btn-div">
+              <button id="notes"><p>Notes</p><span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button>
+              <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
             </div>
-            <div class="middle">
-              <ul id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="#">Mentors</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
-            
-            </div>
-            <div class="lowerLinks">
-              <button>Instagram<span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button>
-              <button>LinkedIn<span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button>
-              <button>Notes<span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button>
-            </div>
-            
-          </div>
-          
-            <button id="notes"><p>Notes</p><span><img src="./Assets/Images/akar-icons_link-out.svg" alt=""></i></span></button> 
-            <button id="hamburger"><i class="ri-menu-line"></i></button>
           </header>
+
           <main>
           <section id="course">
             <div class="upper">
@@ -681,68 +680,105 @@
 
         <!-- Team -->
         <div class="page5">
+          <div class="page5-top">
+            <h2>OSS</h2>
+            <h1>Join Our Team</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur incidunt minima veniam unde recusandae iure veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="page5-Btn">
+            <button class="appln-btn"><p>Applications opening soon</p>
+            <img src="Assets/Images/akar-icons_link-out.svg" alt=""></button>
+          </div>
           <div class="team">
-            <h4 class="title2">OSS</h4>
-            <h2 class="title">THE TEAM</h2>
-            
-            <div class="Members">
-              <div class="member">
+            <div class="team-top">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+            </div>
+            <div class="team-center">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+            </div>
+            <div class="team-bottom">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-              <div class="member">
+              <div class="team-card">
                 <img src="Assets/Images/image 49.png" alt="">
-                <div class="Information">
-                  <h3>Gourav</h3>
-                  <h3>LinkedIn</h3>
+                <div class="team-info">
+                  <div class="name-git">
+                    <h3>Gourav</h3>
+                    <a href="">Github</a>
+                  </div>
+                  <div class="team-role">
+                    <h3>Development Head</h3>
+                  </div>
                 </div>
-                <h3 class="position1">Development Head</h3>
               </div>
-
             </div>
           </div>
         </div>
@@ -903,7 +939,7 @@ Version Control with Git & GitHub
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
