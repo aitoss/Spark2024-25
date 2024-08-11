@@ -606,7 +606,7 @@ body.no-scroll {
   background-color: rgb(255, 255, 255); /* Example color */
   padding: 1rem 1.5rem;
   transform: translate(-50%, -50%);
-  margin-left: 8px;
+  /* margin-left: 8px; */
 }
 
 
@@ -905,6 +905,10 @@ body.no-scroll {
 /* page 3 ends here */
 
 /* Page 4 starts here */
+.page4{
+  z-index: 1000;
+}
+
 .events {
   display: flex;
   flex-direction: column;
@@ -930,7 +934,7 @@ body.no-scroll {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   font-family: Mona-sans-md;
-  font-weight: 400;
+  font-weight: bold;
   color: transparent;
   font-size: 8vw; /* Responsive font size based on viewport height */
   min-height: 100px; /* Ensure a minimum font size for smaller screens */
@@ -1856,7 +1860,7 @@ i.fa-play {
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-out, opacity 1s ease-out;
+  transition: all 0.5s linear;
   opacity: 0;
   padding-bottom: 0; /* Remove extra padding when collapsed */
 }
@@ -1871,10 +1875,10 @@ i.fa-play {
 .faq.active svg {
   transform: rotate(180deg);
 }
-
+/* 
 svg {
   transition: transform 0.5s ease-in;
-}
+} */
 
 @media (max-width: 480px) {
   .answer{
@@ -2127,7 +2131,7 @@ footer {
     margin-top: 10vh;
   }
   .page3 .page3-heading h2 {
-    font-size: 2.5vw;
+    font-size: 1rem;
   }
   .events {
     padding: 10vh 0;
@@ -2166,12 +2170,15 @@ footer {
     margin-top: 16rem;
   }
   .page3 .page3-heading h1 {
+    font-size: 4rem;
     font-weight: bold;
   }
   .events .text-wrapper{
     font-size: 5vh;
+    font-size: 4rem;
   }
   .page5-top h1{
+    font-size: 3rem;
     font-weight: bold;
   }
   .answer p{
@@ -2196,6 +2203,16 @@ footer {
   .footer-bottom h1 span{
     font-size: 27vw;
   }
+  .title2{
+    font-size: 1rem;
+  }
+  .title{
+    font-size: 3.5rem;
+  }
+  .landingPageSpark h1{
+    font-size: 1.4rem;
+    word-spacing: 0.2rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2212,9 +2229,6 @@ footer {
   .landingPageSpark{
     width: 100%;
     margin-top: 16rem;
-  }
-  .landingPageSpark p{
-    font-size: 0.6rem;
   }
   #oss{
     font-size: 0.6rem;

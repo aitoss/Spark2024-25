@@ -157,53 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//footer
-// gsap.from(".footer-top", {
-//   y: "200%",
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 50%",
-//     end: "top 5%",
-//     markers: false,
-//     scrub: 2,
-//   },
-// });
-
-// gsap.from(".footer-bottom", {
-//   y: "200%",
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 100%",
-//     end: "top 5%",
-//     markers: false,
-//     scrub: 2,
-//   },
-// });
-
-// gsap.from(".footer-bottom h1 span", {
-//   y: -120,
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 30%",
-//     end: "top 0%",
-//     markers: false,
-//     scrub: 2,
-//   },
-//   delay: 2,
-// });
-
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
