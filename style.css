@@ -586,9 +586,9 @@ body.no-scroll {
   align-items: center;
 }
 
-/* complete slider bar */
 .slider-navigation {
   position: absolute;
+  /* display: none; Initially hidden */
   top: 6%;
   left: 50%;
   height: 100%;
@@ -598,8 +598,42 @@ body.no-scroll {
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0)
   );
+  z-index: 10;
+}
+#day-indicator {
+  position: fixed; /* Adjust based on your layout */
+  top: 50px; /* Adjust as needed */
+  left: 50%;
+  background-color: rgb(255, 255, 255); /* Example color */
+  padding: 5px 10px;
 }
 
+/* .nav-pointer.fixed {
+  position: absolute;
+  display: flex;
+} */
+
+#day-indicator.fixed{
+  display: flex;
+  /* transition: all 0.5s ease-in; */
+}
+.orange-divider {
+  position: fixed;
+  top: 70px;
+  height: 100px;
+  width: 100px;
+  background-color: orangered;
+  border: 2px solid red;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; /* Lower z-index to be behind the slider-navigation */
+  filter: blur(80px);
+}
+
+/* #day-indicator{
+  width: 80px;
+  height: 80px;
+} */
 .slider-navigation::before {
   content: "";
   position: absolute;
@@ -611,23 +645,18 @@ body.no-scroll {
   transform: translate(-50%, -50%);
 }
 
-/* orange blur */
-.orange-divider {
-  position: absolute;
-  top: -3%;
-  left: 8%;
-}
-
 /* day indicator */
 .nav-pointer {
   position: absolute;
   left: 50%;
-  top: 10%;
-  display: flex;
+  top: 3%;
+  width: 80px;
+  height: 60px;
+  display: none;
   align-items: center;
   justify-content: center;
   background: white;
-  padding: 0.75rem 1.5rem;
+  /* padding: 0.75rem 1.5rem; */
   border-radius: 0.5rem;
   font-family: Mona-sans-sb;
   text-transform: uppercase;
@@ -2060,6 +2089,10 @@ footer {
   .nav-pointer {
     display: none;
   }
+
+  .slider-navigation{
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2116,6 +2149,9 @@ footer {
   }
   .answer p{
     padding-left: 0;
+  }
+  .slider-navigation{
+    display: none;
   }
 }
 

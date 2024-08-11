@@ -56,49 +56,63 @@ closeBtn.addEventListener("click", () => {
   overlay.style.opacity = "0";
   overlayNav.style.width = "0";
 });
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Handle the slider-navigation positioning and visibility
+ScrollTrigger.create({
+  trigger: ".cards",
+  start: "top top",
+  end: "bottom top",
+  onEnter: () => document.getElementById('day-indicator').classList.add('fixed'),
+  onLeave: () => document.getElementById('day-indicator').classList.remove('fixed'),
+  onEnterBack: () => document.getElementById('day-indicator').classList.add('fixed'),
+  onLeaveBack: () => document.getElementById('day-indicator').classList.remove('fixed'),
+});
 
 // timeline
-// const dayIndicator = document.getElementById("day-indicator");
-// const cards = document.querySelectorAll(".idv-card");
+const dayIndicator = document.getElementById("day-indicator");
+const cards = document.querySelectorAll(".idv-card");
 
-// cards.forEach((card, index) => {
-//   ScrollTrigger.create({
-//     trigger: card,
-//     start: "top center",
-//     end: "bottom center",
-//     onEnter: () => updateDayIndicator(index + 1),
-//     onEnterBack: () => updateDayIndicator(index + 1),
-//   });
-// });
+// Create a ScrollTrigger instance for each card
+cards.forEach((card, index) => {
+  ScrollTrigger.create({
+    trigger: card,
+    start: "top center",
+    end: "bottom center", // Adjust as needed to better fit your design
+    markers: false, // Set to true if you want to debug with visual markers
+    onEnter: () => updateDayIndicator(index + 1),
+    onEnterBack: () => updateDayIndicator(index + 1),
+  });
+});
 
-// function updateDayIndicator(day) {
-//   dayIndicator.textContent = `DAY ${day}`;
-// }
+function updateDayIndicator(day) {
+  dayIndicator.textContent = `DAY ${day}`;
+}
 
-// gsap.to("#day-indicator", {
-//   // transform: "translate(-50%, 0 )",
-//   scrollTrigger: {
-//     trigger: ".page3",
-//     scroller: ".cards-container",
-//     start: "top top",
-//     end: "bottom bottom",
-//     duration: 12,
-//     // markers: true,
-//     scrub: 2,
-//     // pin: true,
-//     pinSpacing: false,
-//   },
-// });
+// Create a ScrollTrigger instance to animate the #nav-pointer
+const navPointer = document.getElementsByClassName("nav-pointer");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navOverlay = document.querySelector(".nav-overlay");
-  const closeBtn = document.querySelector(".close-btn");
+gsap.to(navPointer, {
+  y: "100%", // Adjust the end position as needed
+  scrollTrigger: {
+    trigger: ".cards", // Use a suitable trigger
+    start: "top top",
+    end: "bottom top",
+    scrub: true, // This makes the animation follow the scroll position
+    markers: false, // Set to true if you want to debug with visual markers
+  }
+});
 
-  hamburger.addEventListener("click", function () {
-    navOverlay.style.width = "100%"; // Expand the overlay
-    navOverlay.style.opacity = "1"; // Make the overlay visible
-    document.body.classList.add("no-scroll"); // Prevent body scrolling
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.close-btn');
+  
+  hamburger.addEventListener('click', function () {
+    navOverlay.style.width = '100%';  // Expand the overlay
+    navOverlay.style.opacity = '1';   // Make the overlay visible
+    document.body.classList.add('no-scroll'); // Prevent body scrolling
   });
 
   closeBtn.addEventListener("click", function () {
