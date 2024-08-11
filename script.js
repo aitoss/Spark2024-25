@@ -56,6 +56,8 @@ closeBtn.addEventListener("click", () => {
   overlay.style.opacity = "0";
   overlayNav.style.width = "0";
 });
+
+
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,13 +66,25 @@ ScrollTrigger.create({
   trigger: ".cards",
   start: "top top",
   end: "bottom top",
-  onEnter: () => document.getElementById('day-indicator').classList.add('fixed'),
-  onLeave: () => document.getElementById('day-indicator').classList.remove('fixed'),
-  onEnterBack: () => document.getElementById('day-indicator').classList.add('fixed'),
-  onLeaveBack: () => document.getElementById('day-indicator').classList.remove('fixed'),
+  onEnter: () => {
+    document.getElementById('day-indicator').classList.add('fixed');
+    document.querySelector('.orange-divider').classList.add('fixed');
+  },
+  onLeave: () => {
+    document.getElementById('day-indicator').classList.remove('fixed');
+    document.querySelector('.orange-divider').classList.remove('fixed');
+  },
+  onEnterBack: () => {
+    document.getElementById('day-indicator').classList.add('fixed');
+    document.querySelector('.orange-divider').classList.add('fixed');
+  },
+  onLeaveBack: () => {
+    document.getElementById('day-indicator').classList.remove('fixed');
+    document.querySelector('.orange-divider').classList.remove('fixed');
+  },
 });
 
-// timeline
+// Timeline for ScrollTrigger animation
 const dayIndicator = document.getElementById("day-indicator");
 const cards = document.querySelectorAll(".idv-card");
 
@@ -78,8 +92,8 @@ const cards = document.querySelectorAll(".idv-card");
 cards.forEach((card, index) => {
   ScrollTrigger.create({
     trigger: card,
-    start: "top center",
-    end: "bottom center", // Adjust as needed to better fit your design
+    start: "top 30%",
+    end: "bottom 30%", // Adjust as needed to fit your design
     markers: false, // Set to true if you want to debug with visual markers
     onEnter: () => updateDayIndicator(index + 1),
     onEnterBack: () => updateDayIndicator(index + 1),
@@ -90,19 +104,29 @@ function updateDayIndicator(day) {
   dayIndicator.textContent = `DAY ${day}`;
 }
 
-// Create a ScrollTrigger instance to animate the #nav-pointer
-const navPointer = document.getElementsByClassName("nav-pointer");
-
-gsap.to(navPointer, {
+// Create ScrollTrigger instances to animate .nav-pointer and .orange-divider
+gsap.to(".nav-pointer", {
   y: "100%", // Adjust the end position as needed
   scrollTrigger: {
-    trigger: ".cards", // Use a suitable trigger
+    trigger: ".cards",
     start: "top top",
     end: "bottom top",
     scrub: true, // This makes the animation follow the scroll position
     markers: false, // Set to true if you want to debug with visual markers
   }
 });
+
+gsap.to(".orange-divider", {
+  y: "0%", // Adjust the end position as needed
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "top top",
+    end: "bottom top",
+    scrub: true, // This makes the animation follow the scroll position
+    markers: false, // Set to true if you want to debug with visual markers
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.querySelector('.hamburger');
