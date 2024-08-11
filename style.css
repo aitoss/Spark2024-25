@@ -92,6 +92,15 @@ header {
   justify-content: flex-end;
 }
 
+#git_icon
+{
+  background-color: white;
+  border-radius: 2px;
+}
+
+#icon_ht{
+  font-size: 19px;
+}
 #notes {
   display: flex;
   align-items: center;
@@ -753,7 +762,7 @@ body.no-scroll {
 }
 
 .idv-card .icons img {
-  height: 1rem;
+  height: 1.3rem;
   cursor: pointer;
 }
 
@@ -763,7 +772,9 @@ body.no-scroll {
   font-family: Mona-sans-sb;
   font-size: 0.75rem;
 }
-
+#deepshikha_mam{
+  object-fit: cover;
+}
 .card-btn img {
   height: 0.8rem;
 }
@@ -1659,6 +1670,7 @@ body.no-scroll {
     border-radius: 5px;
     filter: grayscale(100%); /* Default to black and white */
     transition: filter 0.3s ease; /* Smooth transition */
+    border-radius: 1.2rem;
   }
 
   .name-git {

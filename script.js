@@ -167,6 +167,19 @@ document.querySelectorAll("nav a").forEach((anchor) => {
     });
   });
 });
+// Links for hamburger menu 
+document.querySelectorAll(" .overlay-nav a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute("href"));
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+    overlay.style.width = "0";
+  });
+});
+
 
 const tlPage = document.querySelector(".page3");
 document.getElementById("getStarted").addEventListener("click", () => {
