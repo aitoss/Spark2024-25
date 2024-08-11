@@ -31,15 +31,11 @@
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
 const closeBtn = document.querySelector(".close-btn");
-const main = document.querySelector(".main");
-const footer = document.querySelector("footer");
+const overlayNav = document.querySelector(".overlay-nav");
 hamburger.addEventListener("click", () => {
   overlay.style.width = "100%";
   overlay.style.opacity = "1";
-  // document.body.style.height = "90vh";
-  // document.body.style.overflowY = "hidden";
-  // main.style.height = "0";
-  // footer.style.opacity = "0";
+  overlayNav.style.width = "20%";
   gsap.from(".overlay-nav a", {
     x: 120,
     opacity: 0,
@@ -57,12 +53,8 @@ hamburger.addEventListener("click", () => {
 });
 closeBtn.addEventListener("click", () => {
   overlay.style.width = "0";
-  overlay.style.width = "0";
   overlay.style.opacity = "0";
-  // document.body.style.height = "100%";
-  // document.body.style.overflowY = "";
-  // main.style.height = "";
-  // footer.style.opacity = "1";
+  overlayNav.style.width = "0";
 });
 
 // timeline
@@ -98,22 +90,21 @@ closeBtn.addEventListener("click", () => {
 //   },
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navOverlay = document.querySelector(".nav-overlay");
+  const closeBtn = document.querySelector(".close-btn");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.querySelector('.hamburger');
-  const navOverlay = document.querySelector('.nav-overlay');
-  const closeBtn = document.querySelector('.close-btn');
-  
-  hamburger.addEventListener('click', function () {
-    navOverlay.style.width = '100%';  // Expand the overlay
-    navOverlay.style.opacity = '1';   // Make the overlay visible
-    document.body.classList.add('no-scroll'); // Prevent body scrolling
+  hamburger.addEventListener("click", function () {
+    navOverlay.style.width = "100%"; // Expand the overlay
+    navOverlay.style.opacity = "1"; // Make the overlay visible
+    document.body.classList.add("no-scroll"); // Prevent body scrolling
   });
 
-  closeBtn.addEventListener('click', function () {
-    navOverlay.style.width = '0';      // Collapse the overlay
-    navOverlay.style.opacity = '0';    // Hide the overlay
-    document.body.classList.remove('no-scroll'); // Allow body scrolling
+  closeBtn.addEventListener("click", function () {
+    navOverlay.style.width = "0"; // Collapse the overlay
+    navOverlay.style.opacity = "0"; // Hide the overlay
+    document.body.classList.remove("no-scroll"); // Allow body scrolling
   });
 });
 
@@ -124,8 +115,8 @@ div3Elements.forEach((div3) => {
   const ellipse = div3.querySelector(".ellipse");
 
   // Set the position of the ellipse to be at the bottom center
-  ellipse.style.top = 'calc(100% - 48.5px)'; // Adjust the position to be at the bottom
-  ellipse.style.left = 'calc(50% - 245px)'; // Center horizontally
+  ellipse.style.top = "calc(100% - 48.5px)"; // Adjust the position to be at the bottom
+  ellipse.style.left = "calc(50% - 245px)"; // Center horizontally
 
   div3.addEventListener("mouseenter", () => {
     ellipse.style.opacity = "1";
@@ -135,7 +126,6 @@ div3Elements.forEach((div3) => {
     ellipse.style.opacity = "0";
   });
 });
-
 
 // Page 6 Js
 document.addEventListener("DOMContentLoaded", () => {
@@ -228,4 +218,3 @@ document.getElementById("getStarted").addEventListener("click", () => {
 document.getElementById("oss").addEventListener("click", () => {
   window.open("https://aitoss.club/", "_blank");
 });
-
