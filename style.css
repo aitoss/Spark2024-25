@@ -619,7 +619,7 @@ body.no-scroll {
   height: 150px;
   width: 150px;
   background-color: orangered;
-  left: 45%;
+  left: 45.5%;
   z-index: -1; /* Lower z-index to be behind the slider-navigation */
   filter: blur(120px);
   display: none; /* Initially hidden */
@@ -1750,10 +1750,8 @@ body.no-scroll {
   margin: auto;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 2rem; */
   cursor: pointer;
   border-bottom: 2px solid #919191;
-  /* padding-bottom: 1rem; */
   padding: 3rem 0;
 }
 
@@ -1763,7 +1761,6 @@ body.no-scroll {
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  /* padding-bottom: 20px; */
   font-size: 48px;
 }
 
@@ -1845,7 +1842,6 @@ i.fa-play {
 
 .faq.active .Head {
   color: #ffffff; /* Color when active */
-  /* transform: translateY(250%); Move downwards */
 }
 
 .IconTraingle i {
@@ -1854,7 +1850,6 @@ i.fa-play {
 
 .faq.active .IconTraingle i {
   transform: rotate(270deg); /* Rotate icon when active */
-  /* transform: translateY(450%); */
   color: white;
 }
 
@@ -2187,12 +2182,19 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
+    margin-top: 6rem;
   }
   .footer-left h4{
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
   .footer-right .footer-nav li a, .links li a{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+  }
+  .email h4{
+    font-size: 1.4rem;
+  }
+  .footer-bottom h1 span{
+    font-size: 27vw;
   }
 }
 
