@@ -154,7 +154,6 @@ header {
 
 #notes span {
   display: flex;
-  margin-top: 4px;
   align-content: center;
   justify-content: center;
 }
