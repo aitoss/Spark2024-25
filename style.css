@@ -24,9 +24,24 @@ body {
   width: 100vw;
   background: #101010;
   overflow-x: hidden;
+  /* cursor: none; */
 }
+/* .custom-crsr {
+  z-index: 100000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  mix-blend-mode: difference;
+  transition: all 1s linear;
+  pointer-events: none;
+  transform: translate(50%, 50%);
+} */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -34,6 +49,7 @@ body {
   position: relative;
   z-index: 10;
   transition: ease-in-out 0.5s;
+  pointer-events: none;
 }
 
 /* page1 started */
@@ -49,6 +65,7 @@ body {
   animation: zoomEffect 100s linear infinite;
   margin: 0;
   padding: 0;
+  pointer-events: auto;
 }
 
 @keyframes zoomEffect {
@@ -96,13 +113,12 @@ header {
   justify-content: flex-end;
 }
 
-#git_icon
-{
+#git_icon {
   background-color: white;
   border-radius: 2px;
 }
 
-#icon_ht{
+#icon_ht {
   font-size: 19px;
 }
 #notes {
@@ -204,7 +220,6 @@ header ul li a:hover {
 
 /* main start */
 main {
-
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -424,7 +439,7 @@ main {
   display: none;
 }
 
-.nav-overlay{
+.nav-overlay {
   height: 93vh;
   background: #101010;
   width: 0;
@@ -438,9 +453,10 @@ main {
   align-items: center;
   transition: ease-in-out 0.5s;
   opacity: 0;
+  pointer-events: auto;
 }
 
-.overlay-top{
+.overlay-top {
   width: 90%;
   margin: 6vw auto;
   display: flex;
@@ -448,38 +464,38 @@ main {
   align-items: center;
 }
 
-.overlay-top img{
+.overlay-top img {
   height: 6vw;
 }
 
-.overlay-top .close-btn{
+.overlay-top .close-btn {
   font-family: Mona-sans-md;
   font-size: 3vw;
   color: white;
 }
 
-.close-btn{
-   cursor: pointer;
+.close-btn {
+  cursor: pointer;
 }
 
-.overlay-nav{
+.overlay-nav {
   display: flex;
   flex-direction: column;
   gap: 4vw;
   width: 0;
 }
-.overlay-nav a{
+.overlay-nav a {
   color: white;
   text-decoration: none;
   font-size: 5vw;
   font-family: Mona-sans-md;
 }
 
-.overlay-bottom{
+.overlay-bottom {
   width: 100%;
 }
 
-.overlay-bottom ul{
+.overlay-bottom ul {
   width: 90%;
   margin: 1vw auto;
   display: flex;
@@ -487,7 +503,7 @@ main {
   align-items: center;
 }
 
-.overlay-bottom ul li a{
+.overlay-bottom ul li a {
   display: flex;
   gap: 2vw;
   justify-content: space-between;
@@ -498,35 +514,30 @@ main {
   font-size: 4vw;
 }
 
-.overlay-bottom ul li a img{
-  height: 4vw;
-}
-
 body.no-scroll {
   overflow: hidden;
 }
 
-.breathe{
+.breathe {
   position: absolute;
   top: 50%;
   z-index: -1;
   opacity: 2;
 }
 
-.breathe img{
+.breathe img {
   width: 50vw;
   animation: planetBreatheEffect 5s infinite alternate ease-in-out;
 }
 
-@keyframes planetBreatheEffect{
-  0%{
+@keyframes planetBreatheEffect {
+  0% {
     scale: 0;
   }
-  100%{
+  100% {
     scale: 6;
   }
 }
-
 
 /* page1 end */
 
@@ -539,6 +550,7 @@ body.no-scroll {
   align-items: center;
   background: #101010;
   padding-top: 10vh;
+  pointer-events: auto;
 }
 
 .title2 {
@@ -590,6 +602,7 @@ body.no-scroll {
   background: #101010;
   position: relative;
   overflow: hidden;
+  pointer-events: auto;
 }
 
 .page3 .page3-heading {
@@ -622,8 +635,7 @@ body.no-scroll {
   /* margin-left: 8px; */
 }
 
-
-#day-indicator.fixed{
+#day-indicator.fixed {
   display: flex;
 }
 .orange-divider {
@@ -776,7 +788,7 @@ body.no-scroll {
   font-family: Mona-sans-sb;
   font-size: 0.75rem;
 }
-#deepshikha_mam{
+#deepshikha_mam {
   object-fit: cover;
 }
 .card-btn img {
@@ -920,8 +932,9 @@ body.no-scroll {
 /* page 3 ends here */
 
 /* Page 4 starts here */
-.page4{
+.page4 {
   z-index: 1000;
+  pointer-events: auto;
 }
 
 .events {
@@ -962,13 +975,13 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 20px; 
+  padding: 0px 20px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  flex-wrap: wrap; 
-  justify-content: center; 
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .events .div-2 {
@@ -1221,7 +1234,6 @@ body.no-scroll {
   white-space: nowrap;
 }
 
-
 .div-3::before {
   content: "";
   position: absolute;
@@ -1350,7 +1362,7 @@ body.no-scroll {
     gap: 60px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Make the cards take the full width */
     padding: 0 10px; /* Add some padding for breathing space */
@@ -1372,7 +1384,7 @@ body.no-scroll {
     gap: 40px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Ensure the card width is 100% */
     padding: 0 8px; /* Reduce padding to fit smaller screens */
@@ -1387,12 +1399,12 @@ body.no-scroll {
     min-height: 60px; /* Adjust minimum height */
   }
 
-  .events .div-wrapper, 
+  .events .div-wrapper,
   .events .div-wrapper-2 {
     padding: 12px 8px; /* Adjust padding inside div wrappers */
   }
 
-  .events .text-wrapper-9, 
+  .events .text-wrapper-9,
   .events .text-wrapper-10 {
     font-size: 16px; /* Decrease text size */
     line-height: 20px;
@@ -1405,7 +1417,7 @@ body.no-scroll {
     gap: 30px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Full width for cards */
     padding: 0 5px; /* Further reduce padding */
@@ -1420,12 +1432,12 @@ body.no-scroll {
     min-height: 50px; /* Reduce minimum height */
   }
 
-  .events .div-wrapper, 
+  .events .div-wrapper,
   .events .div-wrapper-2 {
     padding: 10px 5px; /* Compact padding */
   }
 
-  .events .text-wrapper-9, 
+  .events .text-wrapper-9,
   .events .text-wrapper-10 {
     font-size: 14px; /* Even smaller text size */
     line-height: 18px;
@@ -1445,6 +1457,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   padding-bottom: 8vw;
+  pointer-events: auto;
 }
 
 .page5-top {
@@ -1642,7 +1655,6 @@ body.no-scroll {
   }
 }
 
-
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   .team {
@@ -1657,7 +1669,7 @@ body.no-scroll {
     width: 100%; /* Full width for mobile */
     text-align: center; /* Center-align text */
   }
-  
+
   .team-card {
     width: 90%; /* Adjust width for mobile */
     margin: auto; /* Center the card */
@@ -1731,6 +1743,7 @@ body.no-scroll {
   background: #101010;
   color: white;
   padding-bottom: 5vh;
+  pointer-events: auto;
   /* padding-bottom: 1rem; */
 }
 
@@ -1837,7 +1850,7 @@ i.fa-play {
 .question {
   display: flex;
   justify-content: space-between;
-  align-items:baseline;
+  align-items: baseline;
 }
 
 .answer p {
@@ -1897,8 +1910,8 @@ svg {
 } */
 
 @media (max-width: 480px) {
-  .answer{
-    font-size: .5vh;
+  .answer {
+    font-size: 0.5vh;
   }
 }
 /* page 6 ends here */
@@ -1907,6 +1920,8 @@ svg {
 .page7 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  pointer-events: none;
 }
 /* page7 end */
 
@@ -2069,17 +2084,16 @@ footer {
   }
 }
 
-
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
     height: 100vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.2;
   }
-  .landingPageSpark{
+  .landingPageSpark {
     margin-top: 16rem;
   }
   .page1 header {
@@ -2103,7 +2117,7 @@ footer {
     display: none;
   }
 
-  .slider-navigation{
+  .slider-navigation {
     display: none;
   }
 }
@@ -2115,7 +2129,7 @@ footer {
   .btn-div {
     gap: 5vw;
   }
-  #notes{
+  #notes {
     display: none;
   }
   .hamburger {
@@ -2160,10 +2174,10 @@ footer {
   .question h3 {
     font-size: 3vw;
   }
-  .answer p{
+  .answer p {
     padding-left: 0;
   }
-  .slider-navigation{
+  .slider-navigation {
     display: none;
   }
 }
@@ -2172,7 +2186,7 @@ footer {
   .page1 {
     height: 80vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.2;
   }
@@ -2189,93 +2203,100 @@ footer {
     font-size: 4rem;
     font-weight: bold;
   }
-  .events .text-wrapper{
+  .events .text-wrapper {
     font-size: 5vh;
     font-size: 4rem;
   }
-  .page5-top h1{
+  .page5-top h1 {
     font-size: 3rem;
     font-weight: bold;
   }
-  .answer p{
+  .answer p {
     font-size: 0.6rem;
     padding-left: 0;
   }
-  .footer-top{
+  .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
     margin-top: 6rem;
   }
-  .footer-left h4{
+  .footer-left h4 {
     font-size: 1.4rem;
   }
-  .footer-right .footer-nav li a, .links li a{
+  .footer-right .footer-nav li a,
+  .links li a {
     font-size: 1.2rem;
   }
-  .email h4{
+  .email h4 {
     font-size: 1.4rem;
   }
-  .footer-bottom h1 span{
+  .footer-bottom h1 span {
     font-size: 27vw;
   }
-  .title2{
+  .title2 {
     font-size: 1rem;
   }
-  .title{
+  .title {
     font-size: 3.5rem;
   }
-  .landingPageSpark h1{
+  .landingPageSpark h1 {
     font-size: 1.4rem;
     word-spacing: 0.2rem;
   }
-  .idv-card{
+  .idv-card {
     width: 85vw;
   }
 }
 
 @media (max-width: 500px) {
   .ossWord span {
-  font-size: 1.2rem;
-}
-  #upperList{
+    font-size: 1.2rem;
+  }
+  #upperList {
     margin-bottom: 1rem;
   }
-  .page1{
+  .page1 {
     height: 80vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.5;
   }
-  .landingPageSpark{
+  .landingPageSpark {
     width: 100%;
     margin-top: 16rem;
   }
-  #oss{
+  #oss {
     font-size: 0.6rem;
   }
-  .ossWord{
+  .ossWord {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  .page2{
+  .page2 {
     padding-top: 5vh;
   }
-  #course .upper ul li::marker, #course .upper p, #course .lower ul li::marker, #course .lower p{
+  #course .upper ul li::marker,
+  #course .upper p,
+  #course .lower ul li::marker,
+  #course .lower p {
     font-size: 0.8rem;
   }
-  .Head1, .questionHeading {
+  .Head1,
+  .questionHeading {
     font-size: 4.3vw;
   }
 }
 
 @media (max-width: 768px) {
-  .Head, .question h3 {
-      font-size: 1.2rem;
+  .Head,
+  .question h3 {
+    font-size: 1.2rem;
   }
 
-  .Head, .question .answer {
-      font-size: 0.8rem;
+  .Head,
+  .question .answer {
+    font-size: 0.8rem;
   }
 }

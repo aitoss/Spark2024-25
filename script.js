@@ -3,6 +3,13 @@ const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
 const closeBtn = document.querySelector(".close-btn");
 const overlayNav = document.querySelector(".overlay-nav");
+// const crsr = document.querySelector(".custom-crsr");
+// const footer = document.querySelector(".page7");
+// footer.addEventListener("mousemove", (e) => {
+//   // location.reload();
+//   crsr.style.top = e.y - 50 + "px";
+//   crsr.style.left = e.x - 50 + "px";
+// });
 hamburger.addEventListener("click", () => {
   overlay.style.width = "100%";
   overlay.style.opacity = "1";
@@ -236,4 +243,15 @@ gsap.from(".footer-bottom h1 span", {
     scrub: 2,
   },
   delay: 2,
+});
+
+document.querySelectorAll(".footer-nav li a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute("href"));
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+  });
 });
