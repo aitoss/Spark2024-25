@@ -24,7 +24,22 @@ body {
   width: 100vw;
   background: #101010;
   overflow-x: hidden;
+  /* cursor: none; */
 }
+/* .custom-crsr {
+  z-index: 100000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  mix-blend-mode: difference;
+  transition: all 1s linear;
+  pointer-events: none;
+  transform: translate(50%, 50%);
+} */
 
 ::-webkit-scrollbar {
   display: none;
@@ -34,6 +49,7 @@ body {
   position: relative;
   z-index: 10;
   transition: ease-in-out 0.5s;
+  pointer-events: none;
 }
 
 /* page1 started */
@@ -49,6 +65,7 @@ body {
   animation: zoomEffect 100s linear infinite;
   margin: 0;
   padding: 0;
+  pointer-events: auto;
 }
 
 @keyframes zoomEffect {
@@ -422,7 +439,7 @@ main {
 }
 
 .nav-overlay {
-  height: 93.5vh;
+  height: 93vh;
   background: #101010;
   width: 0;
   top: 0;
@@ -435,6 +452,7 @@ main {
   align-items: center;
   transition: ease-in-out 0.5s;
   opacity: 0;
+  pointer-events: auto;
 }
 
 .overlay-top {
@@ -536,6 +554,7 @@ body.no-scroll {
   align-items: center;
   background: #101010;
   padding-top: 10vh;
+  pointer-events: auto;
 }
 
 .title2 {
@@ -587,7 +606,7 @@ body.no-scroll {
   background: #101010;
   position: relative;
   overflow: hidden;
-  padding-bottom: 100px;
+  pointer-events: auto;
 }
 
 .page3 .page3-heading {
@@ -613,11 +632,9 @@ body.no-scroll {
 }
 #day-indicator {
   position: fixed; /* Adjust based on your layout */
-  /* left: 50%; */
   background-color: rgb(255, 255, 255); /* Example color */
   padding: 1rem 1.5rem;
   transform: translate(-50%, -50%);
-  /* margin-left: 8px; */
 }
 
 #day-indicator.fixed {
@@ -639,10 +656,6 @@ body.no-scroll {
   display: block;
 }
 
-/* #day-indicator{
-  width: 80px;
-  height: 80px;
-} */
 .slider-navigation::before {
   content: "";
   position: absolute;
@@ -659,8 +672,6 @@ body.no-scroll {
   position: absolute;
   left: 50%;
   top: 25%;
-  /* width: 80px;
-  height: 60px; */
   display: none;
   align-items: center;
   justify-content: center;
@@ -918,6 +929,8 @@ body.no-scroll {
 
 /* Page 4 starts here */
 .page4 {
+  z-index: 1000;
+  pointer-events: auto;
   /* z-index: 1000; */
   /* padding-top: 100px; */
 }
@@ -1442,6 +1455,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   padding-bottom: 8vw;
+  pointer-events: auto;
 }
 
 .page5-top {
@@ -1727,6 +1741,7 @@ body.no-scroll {
   background: #101010;
   color: white;
   padding-bottom: 5vh;
+  pointer-events: auto;
   /* padding-bottom: 1rem; */
 }
 
@@ -1904,6 +1919,8 @@ svg {
 .page7 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  pointer-events: none;
 }
 /* page7 end */
 
@@ -2235,10 +2252,10 @@ footer {
   .idv-card {
     width: 85vw;
   }
-  .page5-top h2{
+  .page5-top h2 {
     font-size: 1rem;
   }
-  .title.faqs{
+  .title.faqs {
     margin-bottom: 0vh;
   }
 }
