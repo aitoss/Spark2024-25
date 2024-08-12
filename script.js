@@ -177,6 +177,7 @@ document.querySelectorAll(" .overlay-nav a").forEach((anchor) => {
       behavior: "smooth",
     });
     overlay.style.width = "0";
+    document.body.classList.remove("no-scroll");
   });
 });
 
