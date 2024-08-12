@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .main {
   position: relative;
   z-index: 10;
@@ -2225,6 +2229,9 @@ footer {
     font-size: 1.4rem;
     word-spacing: 0.2rem;
   }
+  .idv-card{
+    width: 85vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2258,13 +2265,9 @@ footer {
   #course .upper ul li::marker, #course .upper p, #course .lower ul li::marker, #course .lower p{
     font-size: 0.8rem;
   }
-  .idv-card{
-    width: 380px;
-  }
-  
   .Head1, .questionHeading {
     font-size: 4.3vw;
-}
+  }
 }
 
 @media (max-width: 768px) {
