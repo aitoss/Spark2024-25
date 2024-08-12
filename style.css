@@ -425,7 +425,7 @@ main {
 }
 
 .nav-overlay{
-  height: 93vh;
+  height: 93.5vh;
   background: #101010;
   width: 0;
   top: 0;
@@ -590,6 +590,7 @@ body.no-scroll {
   background: #101010;
   position: relative;
   overflow: hidden;
+  padding-bottom: 130px;
 }
 
 .page3 .page3-heading {
@@ -921,7 +922,9 @@ body.no-scroll {
 
 /* Page 4 starts here */
 .page4{
-  z-index: 1000;
+  /* z-index: 1000; */
+  /* padding-top: 100px; */
+
 }
 
 .events {
