@@ -1,32 +1,3 @@
-// const locoScroll = new LocomotiveScroll({
-//   el: document.querySelector(".main"),
-//   smooth: true,
-// });
-
-// locoScroll.on("scroll", ScrollTrigger.update);
-
-// ScrollTrigger.scrollerProxy(".main", {
-//   scrollTop(value) {
-//     return arguments.length
-//       ? locoScroll.scrollTo(value, 0, 0)
-//       : locoScroll.scroll.instance.scroll.y;
-//   },
-//   getBoundingClientRect() {
-//     return {
-//       top: 0,
-//       left: 0,
-//       width: window.innerWidth,
-//       height: window.innerHeight,
-//     };
-//   },
-//   pinType: document.querySelector(".main").style.transform
-//     ? "transform"
-//     : "fixed",
-// });
-
-// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-// ScrollTrigger.refresh();
-
 // nav-overlay
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
@@ -56,6 +27,7 @@ closeBtn.addEventListener("click", () => {
   overlay.style.opacity = "0";
   overlayNav.style.width = "0";
 });
+
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,13 +36,25 @@ ScrollTrigger.create({
   trigger: ".cards",
   start: "top top",
   end: "bottom top",
-  onEnter: () => document.getElementById('day-indicator').classList.add('fixed'),
-  onLeave: () => document.getElementById('day-indicator').classList.remove('fixed'),
-  onEnterBack: () => document.getElementById('day-indicator').classList.add('fixed'),
-  onLeaveBack: () => document.getElementById('day-indicator').classList.remove('fixed'),
+  onEnter: () => {
+    document.getElementById("day-indicator").classList.add("fixed");
+    document.querySelector(".orange-divider").classList.add("fixed");
+  },
+  onLeave: () => {
+    document.getElementById("day-indicator").classList.remove("fixed");
+    document.querySelector(".orange-divider").classList.remove("fixed");
+  },
+  onEnterBack: () => {
+    document.getElementById("day-indicator").classList.add("fixed");
+    document.querySelector(".orange-divider").classList.add("fixed");
+  },
+  onLeaveBack: () => {
+    document.getElementById("day-indicator").classList.remove("fixed");
+    document.querySelector(".orange-divider").classList.remove("fixed");
+  },
 });
 
-// timeline
+// Timeline for ScrollTrigger animation
 const dayIndicator = document.getElementById("day-indicator");
 const cards = document.querySelectorAll(".idv-card");
 
@@ -78,8 +62,8 @@ const cards = document.querySelectorAll(".idv-card");
 cards.forEach((card, index) => {
   ScrollTrigger.create({
     trigger: card,
-    start: "top center",
-    end: "bottom center", // Adjust as needed to better fit your design
+    start: "top 30%",
+    end: "bottom 30%", // Adjust as needed to fit your design
     markers: false, // Set to true if you want to debug with visual markers
     onEnter: () => updateDayIndicator(index + 1),
     onEnterBack: () => updateDayIndicator(index + 1),
@@ -90,29 +74,38 @@ function updateDayIndicator(day) {
   dayIndicator.textContent = `DAY ${day}`;
 }
 
-// Create a ScrollTrigger instance to animate the #nav-pointer
-const navPointer = document.getElementsByClassName("nav-pointer");
-
-gsap.to(navPointer, {
+// Create ScrollTrigger instances to animate .nav-pointer and .orange-divider
+gsap.to(".nav-pointer", {
   y: "100%", // Adjust the end position as needed
   scrollTrigger: {
-    trigger: ".cards", // Use a suitable trigger
+    trigger: ".cards",
     start: "top top",
     end: "bottom top",
     scrub: true, // This makes the animation follow the scroll position
     markers: false, // Set to true if you want to debug with visual markers
-  }
+  },
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.querySelector('.hamburger');
-  const navOverlay = document.querySelector('.nav-overlay');
-  const closeBtn = document.querySelector('.close-btn');
-  
-  hamburger.addEventListener('click', function () {
-    navOverlay.style.width = '100%';  // Expand the overlay
-    navOverlay.style.opacity = '1';   // Make the overlay visible
-    document.body.classList.add('no-scroll'); // Prevent body scrolling
+gsap.to(".orange-divider", {
+  y: "0%", // Adjust the end position as needed
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "top top",
+    end: "bottom top",
+    scrub: true, // This makes the animation follow the scroll position
+    markers: false, // Set to true if you want to debug with visual markers
+  },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navOverlay = document.querySelector(".nav-overlay");
+  const closeBtn = document.querySelector(".close-btn");
+
+  hamburger.addEventListener("click", function () {
+    navOverlay.style.width = "100%"; // Expand the overlay
+    navOverlay.style.opacity = "1"; // Make the overlay visible
+    document.body.classList.add("no-scroll"); // Prevent body scrolling
   });
 
   closeBtn.addEventListener("click", function () {
@@ -162,53 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//footer
-// gsap.from(".footer-top", {
-//   y: "200%",
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 50%",
-//     end: "top 5%",
-//     markers: false,
-//     scrub: 2,
-//   },
-// });
-
-// gsap.from(".footer-bottom", {
-//   y: "200%",
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 100%",
-//     end: "top 5%",
-//     markers: false,
-//     scrub: 2,
-//   },
-// });
-
-// gsap.from(".footer-bottom h1 span", {
-//   y: -120,
-//   opacity: 0,
-//   stagger: 0.3,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".page7",
-//     scroller: ".main",
-//     start: "top 30%",
-//     end: "top 0%",
-//     markers: false,
-//     scrub: 2,
-//   },
-//   delay: 2,
-// });
-
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -217,6 +163,19 @@ document.querySelectorAll("nav a").forEach((anchor) => {
       top: targetSection.offsetTop,
       behavior: "smooth",
     });
+  });
+});
+// Links for hamburger menu
+document.querySelectorAll(" .overlay-nav a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute("href"));
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+    overlay.style.width = "0";
+    document.body.classList.remove("no-scroll");
   });
 });
 
@@ -231,4 +190,50 @@ document.getElementById("getStarted").addEventListener("click", () => {
 // oss website redirection
 document.getElementById("oss").addEventListener("click", () => {
   window.open("https://aitoss.club/", "_blank");
+});
+
+// footer
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".footer-top", {
+  opacity: 0,
+  y: "200%",
+  stagger: 0.3,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+});
+
+gsap.from(".footer-bottom", {
+  opacity: 0,
+  y: "100%",
+  stagger: 0.3,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+});
+
+gsap.from(".footer-bottom h1 span", {
+  y: -120,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+  delay: 2,
 });

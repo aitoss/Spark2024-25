@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .main {
   position: relative;
   z-index: 10;
@@ -34,7 +38,7 @@ body {
 
 /* page1 started */
 .page1 {
-  height: 100vh;
+  height: 120vh;
   position: relative;
   overflow: hidden;
   background: url("./Assets/Images/spots.png"),
@@ -92,6 +96,14 @@ header {
   justify-content: flex-end;
 }
 
+#git_icon {
+  background-color: white;
+  border-radius: 2px;
+}
+
+#icon_ht {
+  font-size: 19px;
+}
 #notes {
   display: flex;
   align-items: center;
@@ -191,7 +203,6 @@ header ul li a:hover {
 
 /* main start */
 main {
-
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -411,8 +422,8 @@ main {
   display: none;
 }
 
-.nav-overlay{
-  height: 90vh;
+.nav-overlay {
+  height: 93.5vh;
   background: #101010;
   width: 0;
   top: 0;
@@ -427,7 +438,7 @@ main {
   opacity: 0;
 }
 
-.overlay-top{
+.overlay-top {
   width: 90%;
   margin: 6vw auto;
   display: flex;
@@ -435,46 +446,47 @@ main {
   align-items: center;
 }
 
-.overlay-top img{
+.overlay-top img {
   height: 6vw;
 }
 
-.overlay-top .close-btn{
+.overlay-top .close-btn {
   font-family: Mona-sans-md;
   font-size: 3vw;
   color: white;
 }
 
-.close-btn{
-   cursor: pointer;
+.close-btn {
+  cursor: pointer;
 }
 
-.overlay-nav{
+.overlay-nav {
   display: flex;
   flex-direction: column;
   gap: 4vw;
   width: 0;
 }
-.overlay-nav a{
+.overlay-nav a {
   color: white;
   text-decoration: none;
   font-size: 5vw;
   font-family: Mona-sans-md;
 }
 
-.overlay-bottom{
+.overlay-bottom {
   width: 100%;
 }
 
-.overlay-bottom ul{
+.overlay-bottom ul {
   width: 90%;
   margin: 1vw auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style-type: none;
 }
 
-.overlay-bottom ul li a{
+.overlay-bottom ul li a {
   display: flex;
   gap: 2vw;
   justify-content: space-between;
@@ -485,7 +497,7 @@ main {
   font-size: 4vw;
 }
 
-.overlay-bottom ul li a img{
+.overlay-bottom ul li a img {
   height: 4vw;
 }
 
@@ -493,27 +505,26 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.breathe{
+.breathe {
   position: absolute;
   top: 50%;
   z-index: -1;
   opacity: 2;
 }
 
-.breathe img{
+.breathe img {
   width: 50vw;
   animation: planetBreatheEffect 5s infinite alternate ease-in-out;
 }
 
-@keyframes planetBreatheEffect{
-  0%{
+@keyframes planetBreatheEffect {
+  0% {
     scale: 0;
   }
-  100%{
+  100% {
     scale: 6;
   }
 }
-
 
 /* page1 end */
 
@@ -577,6 +588,7 @@ body.no-scroll {
   background: #101010;
   position: relative;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 
 .page3 .page3-heading {
@@ -602,32 +614,30 @@ body.no-scroll {
 }
 #day-indicator {
   position: fixed; /* Adjust based on your layout */
-  top: 50px; /* Adjust as needed */
-  left: 50%;
+  /* left: 50%; */
   background-color: rgb(255, 255, 255); /* Example color */
-  padding: 5px 10px;
+  padding: 1rem 1.5rem;
+  transform: translate(-50%, -50%);
+  /* margin-left: 8px; */
 }
 
-/* .nav-pointer.fixed {
-  position: absolute;
+#day-indicator.fixed {
   display: flex;
-} */
-
-#day-indicator.fixed{
-  display: flex;
-  /* transition: all 0.5s ease-in; */
 }
 .orange-divider {
   position: fixed;
-  top: 70px;
-  height: 100px;
-  width: 100px;
+  top: 100px;
+  height: 150px;
+  width: 150px;
   background-color: orangered;
-  border: 2px solid red;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 45.5%;
   z-index: -1; /* Lower z-index to be behind the slider-navigation */
-  filter: blur(80px);
+  filter: blur(120px);
+  display: none; /* Initially hidden */
+}
+
+.orange-divider.fixed {
+  display: block;
 }
 
 /* #day-indicator{
@@ -649,24 +659,23 @@ body.no-scroll {
 .nav-pointer {
   position: absolute;
   left: 50%;
-  top: 3%;
-  width: 80px;
-  height: 60px;
+  top: 25%;
+  /* width: 80px;
+  height: 60px; */
   display: none;
   align-items: center;
   justify-content: center;
   background: white;
-  /* padding: 0.75rem 1.5rem; */
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-family: Mona-sans-sb;
   text-transform: uppercase;
   font-size: 1rem;
-  transform: translate(-50%, 0%);
 }
 
 /* Agenda heading*/
 .page3 .page3-heading h2 {
-  font-size: 3.5vw;
+  font-size: 2rem;
   text-align: center;
   font-weight: lighter;
   color: white;
@@ -755,7 +764,7 @@ body.no-scroll {
 }
 
 .idv-card .icons img {
-  height: 1rem;
+  height: 1.3rem;
   cursor: pointer;
 }
 
@@ -765,7 +774,9 @@ body.no-scroll {
   font-family: Mona-sans-sb;
   font-size: 0.75rem;
 }
-
+#deepshikha_mam {
+  object-fit: cover;
+}
 .card-btn img {
   height: 0.8rem;
 }
@@ -907,12 +918,17 @@ body.no-scroll {
 /* page 3 ends here */
 
 /* Page 4 starts here */
+.page4 {
+  /* z-index: 1000; */
+  /* padding-top: 100px; */
+}
+
 .events {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  gap: 108px;
+  /* gap: 108px; */
   position: relative;
   background-color: #101010;
   padding: 20vh 0;
@@ -932,7 +948,7 @@ body.no-scroll {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   font-family: Mona-sans-md;
-  font-weight: 400;
+  font-weight: bold;
   color: transparent;
   font-size: 8vw; /* Responsive font size based on viewport height */
   min-height: 100px; /* Ensure a minimum font size for smaller screens */
@@ -945,13 +961,13 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 20px; 
+  padding: 0px 20px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  flex-wrap: wrap; 
-  justify-content: center; 
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .events .div-2 {
@@ -1204,7 +1220,6 @@ body.no-scroll {
   white-space: nowrap;
 }
 
-
 .div-3::before {
   content: "";
   position: absolute;
@@ -1333,7 +1348,7 @@ body.no-scroll {
     gap: 60px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Make the cards take the full width */
     padding: 0 10px; /* Add some padding for breathing space */
@@ -1355,7 +1370,7 @@ body.no-scroll {
     gap: 40px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Ensure the card width is 100% */
     padding: 0 8px; /* Reduce padding to fit smaller screens */
@@ -1370,12 +1385,12 @@ body.no-scroll {
     min-height: 60px; /* Adjust minimum height */
   }
 
-  .events .div-wrapper, 
+  .events .div-wrapper,
   .events .div-wrapper-2 {
     padding: 12px 8px; /* Adjust padding inside div wrappers */
   }
 
-  .events .text-wrapper-9, 
+  .events .text-wrapper-9,
   .events .text-wrapper-10 {
     font-size: 16px; /* Decrease text size */
     line-height: 20px;
@@ -1388,7 +1403,7 @@ body.no-scroll {
     gap: 30px;
   }
 
-  .events .div-2, 
+  .events .div-2,
   .events .div-12 {
     width: 100%; /* Full width for cards */
     padding: 0 5px; /* Further reduce padding */
@@ -1403,12 +1418,12 @@ body.no-scroll {
     min-height: 50px; /* Reduce minimum height */
   }
 
-  .events .div-wrapper, 
+  .events .div-wrapper,
   .events .div-wrapper-2 {
     padding: 10px 5px; /* Compact padding */
   }
 
-  .events .text-wrapper-9, 
+  .events .text-wrapper-9,
   .events .text-wrapper-10 {
     font-size: 14px; /* Even smaller text size */
     line-height: 18px;
@@ -1625,7 +1640,6 @@ body.no-scroll {
   }
 }
 
-
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
   .team {
@@ -1640,7 +1654,7 @@ body.no-scroll {
     width: 100%; /* Full width for mobile */
     text-align: center; /* Center-align text */
   }
-  
+
   .team-card {
     width: 90%; /* Adjust width for mobile */
     margin: auto; /* Center the card */
@@ -1657,6 +1671,7 @@ body.no-scroll {
     border-radius: 5px;
     filter: grayscale(100%); /* Default to black and white */
     transition: filter 0.3s ease; /* Smooth transition */
+    border-radius: 1.2rem;
   }
 
   .name-git {
@@ -1733,11 +1748,12 @@ body.no-scroll {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: Mona-sans-md;
-  margin-bottom: 1rem;
+  margin-bottom: 10vh;
+  margin-top: 1rem;
 }
 
 .title2 {
-  font-size: 2vw;
+  font-size: 2rem;
   font-family: Mona-sans-md;
 }
 
@@ -1752,10 +1768,8 @@ body.no-scroll {
   margin: auto;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 2rem; */
   cursor: pointer;
   border-bottom: 2px solid #919191;
-  /* padding-bottom: 1rem; */
   padding: 3rem 0;
 }
 
@@ -1765,7 +1779,6 @@ body.no-scroll {
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  /* padding-bottom: 20px; */
   font-size: 48px;
 }
 
@@ -1822,7 +1835,7 @@ i.fa-play {
 .question {
   display: flex;
   justify-content: space-between;
-  align-items:baseline;
+  align-items: baseline;
 }
 
 .answer p {
@@ -1847,7 +1860,6 @@ i.fa-play {
 
 .faq.active .Head {
   color: #ffffff; /* Color when active */
-  /* transform: translateY(250%); Move downwards */
 }
 
 .IconTraingle i {
@@ -1856,14 +1868,13 @@ i.fa-play {
 
 .faq.active .IconTraingle i {
   transform: rotate(270deg); /* Rotate icon when active */
-  /* transform: translateY(450%); */
   color: white;
 }
 
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-out, opacity 1s ease-out;
+  transition: all 0.5s linear;
   opacity: 0;
   padding-bottom: 0; /* Remove extra padding when collapsed */
 }
@@ -1878,14 +1889,14 @@ i.fa-play {
 .faq.active svg {
   transform: rotate(180deg);
 }
-
+/* 
 svg {
   transition: transform 0.5s ease-in;
-}
+} */
 
 @media (max-width: 480px) {
-  .answer{
-    font-size: .5vh;
+  .answer {
+    font-size: 0.5vh;
   }
 }
 /* page 6 ends here */
@@ -2056,17 +2067,16 @@ footer {
   }
 }
 
-
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .page1 {
     height: 100vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.2;
   }
-  .landingPageSpark{
+  .landingPageSpark {
     margin-top: 16rem;
   }
   .page1 header {
@@ -2090,7 +2100,7 @@ footer {
     display: none;
   }
 
-  .slider-navigation{
+  .slider-navigation {
     display: none;
   }
 }
@@ -2102,7 +2112,7 @@ footer {
   .btn-div {
     gap: 5vw;
   }
-  #notes{
+  #notes {
     display: none;
   }
   .hamburger {
@@ -2134,10 +2144,11 @@ footer {
     margin-top: 10vh;
   }
   .page3 .page3-heading h2 {
-    font-size: 2.5vw;
+    font-size: 1rem;
   }
   .events {
     padding: 10vh 0;
+    padding-top: 0;
     gap: 20px;
   }
   .page5-top p {
@@ -2147,11 +2158,15 @@ footer {
   .question h3 {
     font-size: 3vw;
   }
-  .answer p{
+  .answer p {
     padding-left: 0;
   }
-  .slider-navigation{
+  .slider-navigation {
     display: none;
+  }
+  .Head1,
+  .questionHeading {
+    padding-left: 8px;
   }
 }
 
@@ -2159,7 +2174,7 @@ footer {
   .page1 {
     height: 80vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.2;
   }
@@ -2173,77 +2188,110 @@ footer {
     margin-top: 16rem;
   }
   .page3 .page3-heading h1 {
+    font-size: 4rem;
     font-weight: bold;
   }
-  .events .text-wrapper{
+  .events .text-wrapper {
     font-size: 5vh;
+    font-size: 4rem;
   }
-  .page5-top h1{
+  .page5-top h1 {
+    font-size: 3rem;
     font-weight: bold;
   }
-  .answer p{
+  .answer p {
     font-size: 0.6rem;
     padding-left: 0;
   }
-  .footer-top{
+  .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
+    margin-top: 6rem;
   }
-  .footer-left h4{
-    font-size: 0.8rem;
+  .footer-left h4 {
+    font-size: 1.4rem;
   }
-  .footer-right .footer-nav li a, .links li a{
-    font-size: 0.8rem;
+  .footer-right .footer-nav li a,
+  .links li a {
+    font-size: 1.2rem;
+  }
+  .email h4 {
+    font-size: 1.4rem;
+  }
+  .footer-bottom h1 span {
+    font-size: 27vw;
+  }
+  .title2 {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+  }
+  .landingPageSpark h1 {
+    font-size: 1.4rem;
+    word-spacing: 0.2rem;
+  }
+  .idv-card {
+    width: 85vw;
+  }
+  .page5-top h2{
+    font-size: 1rem;
+  }
+  .title.faqs{
+    margin-bottom: 0vh;
   }
 }
 
 @media (max-width: 500px) {
-  #upperList{
+  .ossWord span {
+    font-size: 1.2rem;
+  }
+  #upperList {
     margin-bottom: 1rem;
   }
-  .page1{
+  .page1 {
     height: 80vh;
   }
-  #circularPlanet{
+  #circularPlanet {
     margin-top: 20rem;
     scale: 1.5;
   }
-  .landingPageSpark{
+  .landingPageSpark {
     width: 100%;
     margin-top: 16rem;
   }
-  .landingPageSpark p{
+  #oss {
     font-size: 0.6rem;
   }
-  #oss{
-    font-size: 0.6rem;
-  }
-  .ossWord{
+  .ossWord {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  .page2{
+  .page2 {
     padding-top: 5vh;
   }
-  #course .upper ul li::marker, #course .upper p, #course .lower ul li::marker, #course .lower p{
+  #course .upper ul li::marker,
+  #course .upper p,
+  #course .lower ul li::marker,
+  #course .lower p {
     font-size: 0.8rem;
   }
-  .idv-card{
-    width: 380px;
-  }
-  
-  .Head1, .questionHeading {
+  .Head1,
+  .questionHeading {
     font-size: 4.3vw;
-}
+  }
 }
 
 @media (max-width: 768px) {
-  .Head, .question h3 {
-      font-size: 1.2rem;
+  .Head,
+  .question h3 {
+    font-size: 1.2rem;
   }
 
-  .Head, .question .answer {
-      font-size: 0.8rem;
+  .Head,
+  .question .answer {
+    font-size: 0.8rem;
   }
 }
