@@ -28,7 +28,6 @@ closeBtn.addEventListener("click", () => {
   overlayNav.style.width = "0";
 });
 
-
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,20 +37,20 @@ ScrollTrigger.create({
   start: "top top",
   end: "bottom top",
   onEnter: () => {
-    document.getElementById('day-indicator').classList.add('fixed');
-    document.querySelector('.orange-divider').classList.add('fixed');
+    document.getElementById("day-indicator").classList.add("fixed");
+    document.querySelector(".orange-divider").classList.add("fixed");
   },
   onLeave: () => {
-    document.getElementById('day-indicator').classList.remove('fixed');
-    document.querySelector('.orange-divider').classList.remove('fixed');
+    document.getElementById("day-indicator").classList.remove("fixed");
+    document.querySelector(".orange-divider").classList.remove("fixed");
   },
   onEnterBack: () => {
-    document.getElementById('day-indicator').classList.add('fixed');
-    document.querySelector('.orange-divider').classList.add('fixed');
+    document.getElementById("day-indicator").classList.add("fixed");
+    document.querySelector(".orange-divider").classList.add("fixed");
   },
   onLeaveBack: () => {
-    document.getElementById('day-indicator').classList.remove('fixed');
-    document.querySelector('.orange-divider').classList.remove('fixed');
+    document.getElementById("day-indicator").classList.remove("fixed");
+    document.querySelector(".orange-divider").classList.remove("fixed");
   },
 });
 
@@ -84,7 +83,7 @@ gsap.to(".nav-pointer", {
     end: "bottom top",
     scrub: true, // This makes the animation follow the scroll position
     markers: false, // Set to true if you want to debug with visual markers
-  }
+  },
 });
 
 gsap.to(".orange-divider", {
@@ -95,19 +94,18 @@ gsap.to(".orange-divider", {
     end: "bottom top",
     scrub: true, // This makes the animation follow the scroll position
     markers: false, // Set to true if you want to debug with visual markers
-  }
+  },
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navOverlay = document.querySelector(".nav-overlay");
+  const closeBtn = document.querySelector(".close-btn");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.querySelector('.hamburger');
-  const navOverlay = document.querySelector('.nav-overlay');
-  const closeBtn = document.querySelector('.close-btn');
-  
-  hamburger.addEventListener('click', function () {
-    navOverlay.style.width = '100%';  // Expand the overlay
-    navOverlay.style.opacity = '1';   // Make the overlay visible
-    document.body.classList.add('no-scroll'); // Prevent body scrolling
+  hamburger.addEventListener("click", function () {
+    navOverlay.style.width = "100%"; // Expand the overlay
+    navOverlay.style.opacity = "1"; // Make the overlay visible
+    document.body.classList.add("no-scroll"); // Prevent body scrolling
   });
 
   closeBtn.addEventListener("click", function () {
@@ -167,7 +165,7 @@ document.querySelectorAll("nav a").forEach((anchor) => {
     });
   });
 });
-// Links for hamburger menu 
+// Links for hamburger menu
 document.querySelectorAll(" .overlay-nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -181,7 +179,6 @@ document.querySelectorAll(" .overlay-nav a").forEach((anchor) => {
   });
 });
 
-
 const tlPage = document.querySelector(".page3");
 document.getElementById("getStarted").addEventListener("click", () => {
   window.scrollTo({
@@ -193,4 +190,50 @@ document.getElementById("getStarted").addEventListener("click", () => {
 // oss website redirection
 document.getElementById("oss").addEventListener("click", () => {
   window.open("https://aitoss.club/", "_blank");
+});
+
+// footer
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".footer-top", {
+  opacity: 0,
+  y: "200%",
+  stagger: 0.3,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+});
+
+gsap.from(".footer-bottom", {
+  opacity: 0,
+  y: "100%",
+  stagger: 0.3,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+});
+
+gsap.from(".footer-bottom h1 span", {
+  y: -120,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".page7",
+    start: "top 50%",
+    end: "top 5%",
+    markers: false,
+    scrub: 2,
+  },
+  delay: 2,
 });
