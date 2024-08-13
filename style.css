@@ -439,7 +439,7 @@ main {
 }
 
 .nav-overlay {
-  height: 100vh;
+  height: 101vh;
   background: #101010;
   width: 0;
   top: 0;
