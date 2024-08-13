@@ -858,7 +858,8 @@ body.no-scroll {
 /* Page 4 starts here */
 .events {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;flex-direction: column;
   width: 100%;
   align-items: center;
   gap: 108px;
@@ -883,11 +884,11 @@ body.no-scroll {
   font-family: Mona-sans-md;
   font-weight: 400;
   color: transparent;
-  font-size: 10vh; /* Responsive font size based on viewport height */
-  min-height: 100px; /* Ensure a minimum font size for smaller screens */
+  font-size: 10vh; 
+  min-height: 100px; 
   text-align: center;
   letter-spacing: 0;
-  line-height: 1.25em; /* Adjusted line height */
+  line-height: 1.25em; 
 }
 
 .events .div {
@@ -895,6 +896,7 @@ body.no-scroll {
   align-items: center;
   gap: 20px;
   padding: 0px 20px; 
+  padding-right: 40px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -906,19 +908,21 @@ body.no-scroll {
 .events .div-2 {
   display: flex;
   flex-direction: column;
-  width: 464px;
+  width: 375px; /* Reduce the width of the cards */
   align-items: center;
-  gap: 32px;
+  gap: 10px; /* Reduce the gap between elements inside the cards */
   position: relative;
   align-self: stretch;
+  flex: 1;
+  min-width: 375px;
 }
 
 .events .div-3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 36px;
-  padding: 24px;
+  gap: 24px;
+  padding: 16px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -932,10 +936,10 @@ body.no-scroll {
 
 .events .noise-texture {
   position: absolute;
-  width: 462px;
-  height: 462px;
+  width: 100%;
+height: auto;
   top: 0;
-  left: 1px;
+  left: 0px;
 }
 
 .events .div-4 {
@@ -943,10 +947,8 @@ body.no-scroll {
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
+
 }
 
 .events .text-wrapper-2 {
@@ -965,8 +967,6 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
 }
@@ -1243,7 +1243,7 @@ body.no-scroll {
   flex-direction: column;
   width: 464px;
   align-items: center;
-  gap: 32px;
+  gap: 10px;
   position: relative;
 }
 
@@ -1284,8 +1284,8 @@ body.no-scroll {
 
   .events .div-2, 
   .events .div-12 {
-    width: 100%; /* Make the cards take the full width */
-    padding: 0 10px; /* Add some padding for breathing space */
+    width: 100%; 
+    padding: 0 10px; 
   }
 
   .events .div-3 {
@@ -1293,8 +1293,8 @@ body.no-scroll {
   }
 
   .events .text-wrapper {
-    font-size: 8vh; /* Adjust font size */
-    min-height: 80px; /* Adjust minimum height */
+    font-size: 8vh; 
+    min-height: 80px; 
   }
 }
 
