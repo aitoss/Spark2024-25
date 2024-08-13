@@ -607,6 +607,7 @@ body.no-scroll {
   position: relative;
   overflow: hidden;
   pointer-events: auto;
+  padding-bottom: 10%;
 }
 
 .page3 .page3-heading {
@@ -2176,7 +2177,8 @@ footer {
   .question h3 {
     font-size: 3vw;
   }
-  .answer p {
+  .answer p{
+    font-size: 0.9rem;
     padding-left: 0;
   }
   .slider-navigation {
@@ -2217,8 +2219,8 @@ footer {
     font-size: 3rem;
     font-weight: bold;
   }
-  .answer p {
-    font-size: 0.6rem;
+  .answer p{
+    font-size: 0.8rem;
     padding-left: 0;
   }
   .footer-top {
