@@ -336,7 +336,7 @@ main {
   justify-content: center;
   background: none;
   background-color: transparent;
-  padding: 0.5rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 3rem;
   color: #b2b2b2;
   outline: none;
@@ -364,26 +364,28 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+.landingPageSpark .getStartedBtnContainer{
+  border: 1px solid;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  /* border-image: linear-gradient(to bottom, #313131, #212121) 1; */
+}
 
 /* get started btn */
 #getStarted {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to right bottom, #df7841 0%, #894724 100%);
+  background-image: linear-gradient(to bottom, #FF812A 0%, #E13E00 100%);
   padding: 0.75rem 1.5rem;
+  border: 1px solid;
   border-radius: 0.5rem;
-  margin: 2rem;
   font-family: Mona-sans-sb;
   font-size: 1rem;
-  border: none;
-  transition: 0.5s;
   z-index: 10;
-}
-
-#getStarted:hover {
+  color: white;
+  border-image: linear-gradient(to bottom, #fff, #F25011) 1;
   cursor: pointer;
-  background-position: right center;
 }
 
 /* planet bg */
