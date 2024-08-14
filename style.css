@@ -992,7 +992,7 @@ body.no-scroll {
 
   position: relative;
   /* align-self: stretch; */
-  width: 85%;
+  width: 90%;
   flex: 0 0 auto;
   flex-wrap: wrap;
   justify-content: center;
