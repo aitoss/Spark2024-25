@@ -991,8 +991,8 @@ body.no-scroll {
   padding-right: 20px;
 
   position: relative;
-  align-self: stretch;
-  width: 100%;
+  /* align-self: stretch; */
+  width: 85%;
   flex: 0 0 auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -1001,13 +1001,13 @@ body.no-scroll {
 .events .div-2 {
   display: flex;
   flex-direction: column;
-  width: 375px; /* Reduce the width of the cards */
+  width: 250px; /* Reduce the width of the cards */
   align-items: center;
   gap: 10px; /* Reduce the gap between elements inside the cards */
   position: relative;
   align-self: stretch;
   flex: 1;
-  min-width: 375px;
+  min-width: 275px;
 }
 
 .events .div-3 {
@@ -1214,9 +1214,9 @@ height: auto;
   position: relative;
   align-self: stretch;
   font-family: Mona-sans-sb;
-  font-weight: 400;
+  font-weight: 200;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 24px;
 }
@@ -1333,7 +1333,7 @@ height: auto;
 .events .div-12 {
   display: flex;
   flex-direction: column;
-  width: 464px;
+  width: 275px;
   align-items: center;
   gap: 10px;
   position: relative;
