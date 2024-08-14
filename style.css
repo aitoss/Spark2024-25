@@ -14,33 +14,9 @@
 }
 
 @font-face {
-  font-family: 'Mona-sans';
-  src: url('./Utils/Fonts/MonaSans-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+  font-family: Mona-sans-lg;
+  src: url(Utils/Fonts/MonaSans-Light.ttf);
 }
-
-@font-face {
-  font-family: 'Mona-sans';
-  src: url('./Utils/Fonts/Mona-Sans-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mona-sans';
-  src: url('./Utils/Fonts/Mona-Sans-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mona-sans';
-  src: url('./Utils/Fonts/Mona-Sans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
 
 .instrument-serif-regular-italic {
   font-family: "Instrument Serif", serif;
@@ -59,11 +35,7 @@ body {
   width: 100vw;
   background: #101010;
   overflow-x: hidden;
-  font-family: 'Mona-sans', sans-serif;
-}
-
-* {
-  font-family: 'Mona-sans', sans-serif;
+  /* cursor: none; */
 }
 
 /* .custom-crsr {
@@ -1600,95 +1572,293 @@ body.no-scroll {
   width: 2vw;
 }
 
+.team {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.team-top,
+.team-center,
+.team-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 2vw;
+}
+
+.team-top img,
+.team-center img,
+.team-bottom img {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 5px;
+  filter: grayscale(100%);
+  /* Default to black and white */
+  transition: filter 0.3s ease;
+  /* Smooth transition */
+}
+
+.team-top img:hover,
+.team-center img:hover,
+.team-bottom img:hover {
+  filter: grayscale(0%);
+  /* Original color on hover */
+}
 
 .name-git {
-  width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: Mona-sans-lg;
   color: white;
   font-size: 1rem;
-  padding: 0;
 }
 
 .name-git a {
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-family: Mona-sans-rg;
 }
 
 .name-git a:hover {
   text-decoration: underline;
 }
 
-.person-name {
-  font-size: 1.25rem;
-  color: white;
-}
-
 .team-role {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Mona-sans-lg;
   color: #919191;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
+/* Media Queries for Tablets and Medium Screens (1000px to 768px) */
+@media (max-width: 1000px) and (min-width: 768px) {
+  .team {
+    width: 90%;
+    /* Adjust width for medium screens */
+    gap: 1.5vw;
+    /* Reduced gap for medium screens */
+  }
 
-.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  .team-top,
+  .team-center,
+  .team-bottom {
+    width: 100%;
+    /* Full width */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    justify-content: center;
+    /* Center-align items horizontally */
+    gap: 1.5vw;
+    /* Reduced gap */
+  }
+
+  .team-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-top .team-card,
+  .team-center .team-card,
+  .team-bottom .team-card {
+    width: 45%;
+    /* Adjust width for medium screens to fit 2 per row */
+    margin-bottom: 2vw;
+    /* Space below each card */
+    display: flex;
+    flex-direction: column;
+    /* Stack image and content vertically */
+    align-items: center;
+    /* Center-align items horizontally */
+    text-align: center;
+    /* Center-align text inside card */
+  }
+
+  .team-top .team-card:nth-of-type(1),
+  .team-top .team-card:nth-of-type(2),
+  .team-center .team-card:nth-of-type(1),
+  .team-center .team-card:nth-of-type(2),
+  .team-center .team-card:nth-of-type(3),
+  .team-bottom .team-card:nth-of-type(1),
+  .team-bottom .team-card:nth-of-type(2) {
+    width: 30%;
+    /* Adjust width for 3 per row */
+  }
+
+  .team-top img,
+  .team-center img,
+  .team-bottom img {
+    height: 25vw;
+    /* Adjust image size for medium screens */
+    width: 25vw;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    filter: grayscale(100%);
+    /* Default to black and white */
+    transition: filter 0.3s ease;
+    /* Smooth transition */
+    margin-bottom: 1vw;
+    /* Space below image */
+    object-fit: cover;
+  }
+
+  .name-git {
+    display: flex;
+    flex-direction: column;
+    /* Stack name and link vertically */
+    align-items: center;
+    /* Center-align items horizontally */
+    margin-top: 1vw;
+    /* Space above name-git */
+  }
+
+  .name-git h3,
+  .name-git a {
+    margin: 0.5vw 0;
+    /* Space between items */
+  }
+
+  .team-role {
+    display: flex;
+    justify-content: center;
+    /* Center the role text horizontally */
+    margin-top: 1vw;
+    /* Space above role */
+    color: #919191;
+    /* Ensure color is visible on dark background */
+  }
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .team {
+    width: 100%;
+    /* Full width for mobile */
+    gap: 1vw;
+    /* Reduced gap for mobile */
+  }
+
+  .team-top,
+  .team-center,
+  .team-bottom {
+    display: block;
+    /* Stack items vertically */
+    width: 100%;
+    /* Full width for mobile */
+    text-align: center;
+    /* Center-align text */
+  }
+
+  .team-card {
+    width: 90%;
+    /* Adjust width for mobile */
+    margin: auto;
+    /* Center the card */
+    padding-bottom: 5vw;
+    /* Space below each card */
+  }
+
+  .team-top img,
+  .team-center img,
+  .team-bottom img {
+    margin: auto;
+    display: block;
+    /* Center image horizontally */
+    height: 40vw;
+    width: 40vw;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    /* Default to black and white */
+    transition: filter 0.3s ease;
+    /* Smooth transition */
+    border-radius: 1.2rem;
+  }
+
+  .name-git {
+    display: flex;
+    flex-direction: column;
+    /* Stack name and link vertically */
+    align-items: center;
+    /* Center-align items */
+    margin-top: 1vw;
+    /* Space above name-git */
+  }
+
+  .name-git h3,
+  .name-git a {
+    margin: 0.5vw 0;
+    /* Space between items */
+  }
+
+  .team-role {
+    display: flex;
+    justify-content: center;
+    /* Center the role text */
+    margin-top: 1vw;
+    /* Space above role */
+    color: #919191;
+    /* Ensure color is visible on dark background */
+  }
 }
 
-.team-info {
-  width: full;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0px;
+@media (max-width: 480px) {
+
+  .team-top img,
+  .team-center img,
+  .team-bottom img {
+    height: 50vw;
+    /* Larger images for very small devices */
+    width: 50vw;
+    /* Maintain aspect ratio */
+  }
+
+  .team-card {
+    width: 100%;
+    /* Full width for very small devices */
+    padding-bottom: 4vw;
+    /* Adjust spacing for very small devices */
+  }
+
+  .name-git {
+    margin-top: 2vw;
+    /* Increased space above name-git */
+  }
+
+  .name-git h3,
+  .name-git a {
+    margin: 1vw 0;
+    /* Increased space between items */
+  }
+
+  .team-role {
+    margin-top: 2vw;
+    /* Increased space above role */
+  }
 }
 
-.team-card {
-  width: 300px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 8px;
-}
+/* page 5 ends here */
 
-.team-card img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.team-card img:hover {
-  filter: grayscale(0%);
-}
-
-.team-center{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  /* width: 1100px; */
-  max-width: 1100px;
-  gap: 2rem;
-}
 /* page 6 starts here */
 .page6 {
   min-height: 110vh;
@@ -2136,6 +2306,10 @@ footer {
 
   .appln-btn {
     font-size: 1.5rem;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
   }
 }
 
