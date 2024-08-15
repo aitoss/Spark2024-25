@@ -1001,13 +1001,12 @@ body.no-scroll {
 .events .div-2 {
   display: flex;
   flex-direction: column;
-  width: 250px; /* Reduce the width of the cards */
   align-items: center;
   gap: 10px; /* Reduce the gap between elements inside the cards */
   position: relative;
   align-self: stretch;
-  flex: 1;
-  min-width: 275px;
+  flex: 1 1 400px;
+  max-width: 400px;
 }
 
 .events .div-3 {
