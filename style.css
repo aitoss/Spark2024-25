@@ -2287,6 +2287,9 @@ footer {
   .title.faqs {
     margin-bottom: 0vh;
   }
+  .footer-img{
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
