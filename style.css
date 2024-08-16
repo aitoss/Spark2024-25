@@ -133,7 +133,7 @@ header {
   padding: 1rem 1.1rem;
   border-radius: 0.75rem;
   border: 1px solid #4a4a4a;
-  background: rgba(255, 255, 255,0);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(2px);
   overflow: hidden;
 }
@@ -364,7 +364,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.landingPageSpark .getStartedBtnContainer{
+.landingPageSpark .getStartedBtnContainer {
   border: 1px solid;
   margin: 2rem;
   border-radius: 0.5rem;
@@ -377,7 +377,7 @@ main {
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #FF812A 0%, #E13E00 100%);
+  background-image: linear-gradient(to bottom, #ff812a 0%, #e13e00 100%);
   padding: 0.75rem 1.5rem;
   border: 1px solid;
   border-radius: 0.5rem;
@@ -385,11 +385,11 @@ main {
   font-size: 1rem;
   z-index: 10;
   color: white;
-  border-image: linear-gradient(to bottom, #fff, #F25011) 1;
+  border-image: linear-gradient(to bottom, #fff, #f25011) 1;
   cursor: pointer;
 }
 
-#getStarted p{
+#getStarted p {
   color: white;
 }
 
@@ -446,7 +446,7 @@ main {
 }
 
 .nav-overlay {
-  height: 101vh;
+  height: 100%;
   background: #101010;
   width: 0;
   top: 0;
@@ -474,13 +474,12 @@ main {
   height: 6vw;
 }
 
-
 /* Apply styles to all images with the class 'imgIcon' */
 .imgIcon {
-  filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(0deg)
+    brightness(100%) contrast(100%);
   filter: invert(1);
 }
-
 
 .overlay-top .close-btn {
   font-family: Mona-sans-md;
@@ -497,6 +496,7 @@ main {
   flex-direction: column;
   gap: 4vw;
   width: 0;
+  transition: ease-in-out 2s;
 }
 .overlay-nav a {
   color: white;
@@ -701,7 +701,7 @@ body.no-scroll {
   font-size: 1rem;
   text-align: center;
   font-weight: lighter;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-family: Mona-sans-md;
 }
 
@@ -951,7 +951,8 @@ body.no-scroll {
 .events {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   /* gap: 108px; */
@@ -976,19 +977,19 @@ body.no-scroll {
   font-family: Mona-sans-md;
   font-weight: bold;
   color: transparent;
-  font-size: 10vh; 
-  min-height: 100px; 
+  font-size: 10vh;
+  min-height: 100px;
 
   text-align: center;
   letter-spacing: 0;
-  line-height: 1.25em; 
+  line-height: 1.25em;
 }
 
 .events .div {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 20px; 
+  padding: 0px 20px;
   padding-right: 20px;
 
   position: relative;
@@ -1030,7 +1031,7 @@ body.no-scroll {
 .events .noise-texture {
   position: absolute;
   width: 100%;
-height: auto;
+  height: auto;
   top: 0;
   left: 0px;
 }
@@ -1041,7 +1042,6 @@ height: auto;
   align-items: flex-start;
   gap: 24px;
   width: 100%;
-
 }
 
 .events .text-wrapper-2 {
@@ -1376,8 +1376,8 @@ height: auto;
 
   .events .div-2,
   .events .div-12 {
-    width: 100%; 
-    padding: 0 10px; 
+    width: 100%;
+    padding: 0 10px;
   }
 
   .events .div-3 {
@@ -1385,8 +1385,8 @@ height: auto;
   }
 
   .events .text-wrapper {
-    font-size: 8vh; 
-    min-height: 80px; 
+    font-size: 8vh;
+    min-height: 80px;
   }
 }
 
@@ -1782,7 +1782,7 @@ height: auto;
 
 .title2 {
   font-size: 1rem;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-family: Mona-sans-md;
 }
 
@@ -1884,7 +1884,7 @@ i.fa-play {
   color: #919191; /* Default color for text */
 }
 
-.faq.active .question h3 {
+.faq.active .question p {
   color: #ffffff; /* Color when active */
 }
 
@@ -1893,7 +1893,7 @@ i.fa-play {
 }
 
 .IconTraingle i {
-  transition: transform 0.6s ease in ;
+  transition: transform 0.6s ease in;
 }
 
 .faq.active .IconTraingle i {
@@ -1966,7 +1966,7 @@ footer {
   margin-top: 3vw;
 }
 
-.footer-left{
+.footer-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1979,7 +1979,7 @@ footer {
   font-weight: 100;
 }
 
-.footer-img{
+.footer-img {
   width: 35%;
   margin-left: 0.7rem;
 }
@@ -2199,10 +2199,10 @@ footer {
     font-size: 0.8rem;
   }
   .Head,
-  .question h3 {
+  .question p {
     font-size: 3vw;
   }
-  .answer p{
+  .answer p {
     font-size: 0.9rem;
     padding-left: 0;
   }
@@ -2244,7 +2244,7 @@ footer {
     font-size: 3rem;
     font-weight: bold;
   }
-  .answer p{
+  .answer p {
     font-size: 0.95rem;
     padding-left: 0;
   }
@@ -2287,7 +2287,7 @@ footer {
   .title.faqs {
     margin-bottom: 0vh;
   }
-  .footer-img{
+  .footer-img {
     display: none;
   }
 }
@@ -2334,8 +2334,8 @@ footer {
 
 @media (max-width: 768px) {
   .Head,
-  .question h3 {
-    font-size: 1.2rem;
+  .question p {
+    font-size: 0.8rem;
   }
 
   .Head,
