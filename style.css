@@ -589,7 +589,7 @@ body.no-scroll {
 
 .faq1 {
   width: 50%;
-  border-bottom: 1px solid #919191;
+  border-bottom: 1px solid #9191917c;
   padding: 2.25rem 0;
   display: flex;
   align-items: center;
@@ -1800,6 +1800,7 @@ body.no-scroll {
   cursor: pointer;
   border-bottom: 2px solid #919191;
   padding: 2.25rem 0;
+  justify-content: space-between;
 }
 
 .questionMain {
@@ -1841,11 +1842,21 @@ body.no-scroll {
   margin: 0;
 }
 
+
+.IconTraingle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem; 
+
+  
+}
 .IconTraingle i {
   transition: transform 0.6s ease; /* Smooth transition for transform property */
+  /* font-size: 5rem; */
 }
 
-.IconTraingle i.fa-play {
+.IconTraingle i {
   right: 0;
   font-size: 1.2rem;
   color: #919191;
@@ -1878,7 +1889,7 @@ i.fa-play {
   /* padding-left: 3.5rem; */
   padding-bottom: 20px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(248, 248, 248, 0.42);
 }
 .faq {
   color: #919191; /* Default color for text */
