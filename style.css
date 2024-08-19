@@ -12,7 +12,7 @@
   font-family: Mona-sans-rg;
   src: url(Utils/Fonts/Mona-Sans-Regular.ttf);
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -66,6 +66,7 @@ body {
   margin: 0;
   padding: 0;
   pointer-events: auto;
+ 
 }
 
 @keyframes zoomEffect {
@@ -564,6 +565,7 @@ body.no-scroll {
 
 /* page2 started */
 .page2 {
+  padding-top: 100px;
   min-height: 100vh;
   width: 100%;
   display: flex;
