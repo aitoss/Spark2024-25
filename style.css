@@ -992,8 +992,8 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0px 20px;
-  padding-right: 20px;
+  /* padding: 0px 20px; */
+  /* padding-right: 20px; */
 
   position: relative;
   /* align-self: stretch; */
@@ -1091,7 +1091,17 @@ body.no-scroll {
   line-height: 17.5px;
   white-space: nowrap;
 }
-
+.events .prize-pool-wrapper-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 16px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #ffffff1a;
+  border-radius: 50px;
+}
 .events .prize-pool-wrapper {
   display: inline-flex;
   align-items: center;
@@ -1401,8 +1411,8 @@ body.no-scroll {
 
   .events .div-2,
   .events .div-12 {
-    width: 100%; /* Ensure the card width is 100% */
-    padding: 0 8px; /* Reduce padding to fit smaller screens */
+    width: 85vw; /* Ensure the card width is 100% */
+    /* padding: 0 8px; Reduce padding to fit smaller screens */
   }
 
   .events .div-3 {
@@ -1781,6 +1791,8 @@ body.no-scroll {
   margin-bottom: 3vh;
   margin-top: 1rem;
   line-height: 100%;
+  letter-spacing: 0.02em;
+  font-weight: 300;
 }
 
 .title2 {
