@@ -2053,6 +2053,9 @@ footer {
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-bottom {
