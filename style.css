@@ -687,6 +687,21 @@ body.no-scroll {
   transform: translate(-50%, -50%);
 }
 
+.slider-navigation1::before{
+  content: "";
+  position: absolute;
+  top: 99.8%;
+  align-self: baseline;
+  left: 50.05vw;
+  justify-self: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: rgb(204, 202, 202);
+  transform: translate(-50%, -50%);
+}
+
+
 /* day indicator */
 .nav-pointer {
   position: absolute;
@@ -1926,7 +1941,7 @@ i.fa-play {
 }
 
 .IconTraingle i {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s linear;
 }
 
 .faq.active .IconTraingle i {
@@ -1937,7 +1952,7 @@ i.fa-play {
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s linear;
+  transition:  all ease 0.31s ;
   opacity: 0;
   padding-bottom: 0;
 }
@@ -1953,7 +1968,7 @@ i.fa-play {
   transform: rotate(180deg);
 }
 /* Remove focus outline on mobile devices */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .faq {
     outline: none;
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
@@ -1962,6 +1977,15 @@ i.fa-play {
   .faq:focus {
     outline: none;
     -webkit-focus-ring-color: transparent; /* Remove focus ring on WebKit browsers */
+  }
+  .slider-navigation,.slider-navigation1,
+  .orange-divider,
+  .nav-pointer {
+    display: none;
+  }
+
+  .slider-navigation ,.slider-navigation1{
+    display: none;
   }
 }
 /* 
@@ -2133,6 +2157,9 @@ footer {
 
   .footer-bottom h1 {
     font-size: 12vw; /* Adjust font size for headings */
+  }
+  .slider-navigation1,.slider-navigation1::before {
+    display: none;
   }
 }
 
