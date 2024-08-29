@@ -254,7 +254,7 @@ document.querySelectorAll(".footer-nav li a").forEach((anchor) => {
     });
   });
 });
-//page 3
+//page 3 buttons
 document.getElementById("notesButton1").addEventListener("click", function () {
   // window.location.href = "";
   window.open(
@@ -262,8 +262,11 @@ document.getElementById("notesButton1").addEventListener("click", function () {
     "_blank"
   );
 });
-document.getElementById("notesButton2").addEventListener("click", function () {
-  window.location.href = "";
+document.getElementById("notesButton3").addEventListener("click", function () {
+  window.open(
+    "https://economic-snowboard-82f.notion.site/https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
+    "_blank"
+  );
 });
 document.getElementById("notesButton3").addEventListener("click", function () {
   window.open(
