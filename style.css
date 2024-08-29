@@ -12,7 +12,7 @@
   font-family: Mona-sans-rg;
   src: url(Utils/Fonts/Mona-Sans-Regular.ttf);
 }
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -24,7 +24,22 @@ body {
   width: 100vw;
   background: #101010;
   overflow-x: hidden;
+  /* cursor: none; */
 }
+/* .custom-crsr {
+  z-index: 100000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  mix-blend-mode: difference;
+  transition: all 1s linear;
+  pointer-events: none;
+  transform: translate(50%, 50%);
+} */
 
 ::-webkit-scrollbar {
   display: none;
@@ -39,11 +54,11 @@ body {
 
 /* page1 started */
 .page1 {
-  height: 110vh;
+  height: 120vh;
   position: relative;
   overflow: hidden;
   background: url("./Assets/Images/spots.png"),
-    url("Assets/Images/Noise\ &\ Texture.webp"),
+    url("./Assets/Images/Noise\ &\ Texture.png"),
     radial-gradient(#3d2f2d 0%, #101010 66%);
   background-position: center;
   background-size: cover;
@@ -51,6 +66,7 @@ body {
   margin: 0;
   padding: 0;
   pointer-events: auto;
+ 
 }
 
 @keyframes zoomEffect {
@@ -374,6 +390,7 @@ main {
   border-image: linear-gradient(to bottom, #fff, #f25011) 1;
   cursor: pointer;
   /* margin-top: 1rem; */
+
 }
 
 #getStarted p {
@@ -387,7 +404,6 @@ main {
   align-self: baseline;
   justify-self: center;
   margin-top: 6rem;
-  scale: 1.04;
 }
 
 #circularPlanet img {
@@ -585,7 +601,7 @@ body.no-scroll {
   justify-content: center;
   flex-wrap: wrap;
   -webkit-focus-ring-color: transparent;
-  outline: none;
+  outline: none
 }
 .questionMain1 {
   width: 100%;
@@ -686,6 +702,7 @@ body.no-scroll {
   transform: translate(-50%, -50%);
 } */
 
+
 /* day indicator */
 .nav-pointer {
   position: absolute;
@@ -766,6 +783,7 @@ body.no-scroll {
   align-self: flex-end;
 }
 
+
 .left {
   margin-top: 20vh;
   align-self: flex-start;
@@ -833,6 +851,7 @@ body.no-scroll {
   opacity: 0.1;
 }
 
+
 .idv-card::after {
   content: "";
   position: absolute;
@@ -878,6 +897,7 @@ body.no-scroll {
   color: #919191;
   font-size: 0.85rem;
 }
+
 
 .card-btns-container {
   width: 100%;
@@ -1927,7 +1947,7 @@ i.fa-play {
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: all ease 0.31s;
+  transition:  all ease 0.31s ;
   opacity: 0;
   padding-bottom: 0;
 }
@@ -1946,22 +1966,20 @@ i.fa-play {
 @media (max-width: 1200px) {
   .faq {
     outline: none;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; 
   }
 
   .faq:focus {
     outline: none;
-    -webkit-focus-ring-color: transparent;
+    -webkit-focus-ring-color: transparent; 
   }
-  .slider-navigation,
-  .slider-navigation1,
+  .slider-navigation,.slider-navigation1,
   .orange-divider,
   .nav-pointer {
     display: none;
   }
 
-  .slider-navigation,
-  .slider-navigation1 {
+  .slider-navigation ,.slider-navigation1{
     display: none;
   }
 }
@@ -2135,8 +2153,7 @@ footer {
   .footer-bottom h1 {
     font-size: 12vw; /* Adjust font size for headings */
   }
-  .slider-navigation1,
-  .slider-navigation1::before {
+  .slider-navigation1,.slider-navigation1::before {
     display: none;
   }
 }
@@ -2171,7 +2188,7 @@ footer {
   }
   #circularPlanet {
     margin-top: 20rem;
-    scale: 1.5;
+    scale: 1.2;
   }
   .landingPageSpark {
     margin-top: 16rem;
@@ -2274,7 +2291,7 @@ footer {
   }
   #circularPlanet {
     margin-top: 20rem;
-    scale: 1.7;
+    scale: 1.2;
   }
   #lowerList {
     gap: 70vw;
@@ -2357,7 +2374,7 @@ footer {
   }
   #circularPlanet {
     margin-top: 20rem;
-    scale: 2;
+    scale: 1.5;
   }
   .landingPageSpark {
     width: 100%;
@@ -2367,8 +2384,8 @@ footer {
     font-size: 0.6rem;
   }
   .ossWord {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
   .page2 {
     padding-top: 5vh;
