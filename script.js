@@ -195,9 +195,9 @@ document.getElementById("getStarted").addEventListener("click", () => {
 });
 
 // oss website redirection
-document.getElementById("oss").addEventListener("click", () => {
-  window.open("https://aitoss.club/", "_blank");
-});
+// document.getElementById("oss").addEventListener("click", () => {
+//   window.open("https://aitoss.club/", "_blank");
+// });
 
 // footer
 gsap.registerPlugin(ScrollTrigger);
@@ -254,92 +254,92 @@ document.querySelectorAll(".footer-nav li a").forEach((anchor) => {
     });
   });
 });
-//page 3 buttons
-document.getElementById("notesButton1").addEventListener("click", function () {
-  // window.location.href = "";
-  window.open(
-    "https://economic-snowboard-82f.notion.site/HTML-e306ec5af9014818847fe94d8e1eb852?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton3").addEventListener("click", function () {
-  window.open(
-    "https://economic-snowboard-82f.notion.site/https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton3").addEventListener("click", function () {
-  window.open(
-    "https://economic-snowboard-82f.notion.site/Introduction-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton4").addEventListener("click", function () {
-  window.open(
-    "https://economic-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton5").addEventListener("click", function () {
-  window.open(
-    "https://economic-https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton6").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton7").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton8").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton9").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton10").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton11").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
-document.getElementById("notesButton12").addEventListener("click", function () {
-  window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
-    "_blank"
-  );
-});
+// //page 3 buttons
+// document.getElementById("notesButton1").addEventListener("click", function () {
+//   // window.location.href = "";
+//   window.open(
+//     "https://economic-snowboard-82f.notion.site/HTML-e306ec5af9014818847fe94d8e1eb852?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton3").addEventListener("click", function () {
+//   window.open(
+//     "https://economic-snowboard-82f.notion.site/https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton3").addEventListener("click", function () {
+//   window.open(
+//     "https://economic-snowboard-82f.notion.site/Introduction-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton4").addEventListener("click", function () {
+//   window.open(
+//     "https://economic-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton5").addEventListener("click", function () {
+//   window.open(
+//     "https://economic-https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton6").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton7").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton8").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton9").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton10").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton11").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
+// document.getElementById("notesButton12").addEventListener("click", function () {
+//   window.open(
+//     "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+//     "_blank"
+//   );
+// });
 
-document.getElementById("notes").addEventListener("click", function () {
-  window.open(
-    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8?pvs=4",
-    "_blank"
-  );
-});
-document
-  .getElementById("notesHamburgerSec")
-  .addEventListener("click", function () {
-    window.open(
-      "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
-      "_blank"
-    );
-  });
+// document.getElementById("notes").addEventListener("click", function () {
+//   window.open(
+//     "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8?pvs=4",
+//     "_blank"
+//   );
+// });
+// document
+//   .getElementById("notesHamburgerSec")
+//   .addEventListener("click", function () {
+//     window.open(
+//       "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
+//       "_blank"
+//     );
+//   });

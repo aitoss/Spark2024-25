@@ -643,6 +643,7 @@ body.no-scroll {
   left: 50%;
   height: 100%;
   width: 2px;
+  /* background-color: white; */
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1),
@@ -652,7 +653,7 @@ body.no-scroll {
 }
 #day-indicator {
   position: fixed; /* Adjust based on your layout */
-  background-color: rgb(255, 255, 255); /* Example color */
+  /* background-color: rgb(255, 255, 255); Example color */
   padding: 1rem 1.5rem;
   transform: translate(-50%, -50%);
 }
@@ -687,7 +688,7 @@ body.no-scroll {
   transform: translate(-50%, -50%);
 }
 
-.slider-navigation1::before{
+/* .slider-navigation1::before{
   content: "";
   position: absolute;
   top: 99.8%;
@@ -699,7 +700,7 @@ body.no-scroll {
   width: 20px;
   background: rgb(204, 202, 202);
   transform: translate(-50%, -50%);
-}
+} */
 
 
 /* day indicator */
@@ -777,19 +778,17 @@ body.no-scroll {
   overflow: hidden;
 }
 
-/* cards on right (odd days card)*/
 .right {
   margin-top: 20vh;
   align-self: flex-end;
 }
 
-/* cards on left (even days card) */
+
 .left {
   margin-top: 20vh;
   align-self: flex-start;
 }
 
-/* card header */
 .idv-card .class-top {
   display: flex;
   align-items: center;
@@ -797,7 +796,6 @@ body.no-scroll {
   width: 100%;
 }
 
-/* vs code and github icons */
 .idv-card .icons {
   display: flex;
   align-items: center;
@@ -813,7 +811,6 @@ body.no-scroll {
   cursor: pointer;
 }
 
-/* date of conduction of that particular class */
 .idv-card .date {
   color: white;
   font-family: Mona-sans-sb;
@@ -826,7 +823,6 @@ body.no-scroll {
   height: 0.8rem;
 }
 
-/* orange shadow from top on hover */
 .idv-card::before {
   content: "";
   position: absolute;
@@ -855,7 +851,7 @@ body.no-scroll {
   opacity: 0.1;
 }
 
-/* white shadow from bottom on hover */
+
 .idv-card::after {
   content: "";
   position: absolute;
@@ -883,7 +879,6 @@ body.no-scroll {
   opacity: 0.1;
 }
 
-/* card content: topic of class and basic info */
 .card-content {
   color: white;
   width: 100%;
@@ -903,7 +898,7 @@ body.no-scroll {
   font-size: 0.85rem;
 }
 
-/* container for btns */
+
 .card-btns-container {
   width: 100%;
   display: flex;
@@ -1967,16 +1962,16 @@ i.fa-play {
 .faq.active svg {
   transform: rotate(180deg);
 }
-/* Remove focus outline on mobile devices */
-@media (max-width: 1600px) {
+
+@media (max-width: 1200px) {
   .faq {
     outline: none;
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+    -webkit-tap-highlight-color: transparent; 
   }
 
   .faq:focus {
     outline: none;
-    -webkit-focus-ring-color: transparent; /* Remove focus ring on WebKit browsers */
+    -webkit-focus-ring-color: transparent; 
   }
   .slider-navigation,.slider-navigation1,
   .orange-divider,
