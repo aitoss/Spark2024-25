@@ -1,15 +1,8 @@
-// nav-overlay
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
 const closeBtn = document.querySelector(".close-btn");
 const overlayNav = document.querySelector(".overlay-nav");
-// const crsr = document.querySelector(".custom-crsr");
-// const footer = document.querySelector(".page7");
-// footer.addEventListener("mousemove", (e) => {
-//   // location.reload();
-//   crsr.style.top = e.y - 50 + "px";
-//   crsr.style.left = e.x - 50 + "px";
-// });
+
 hamburger.addEventListener("click", () => {
   overlay.style.width = "100%";
   overlay.style.opacity = "1";
@@ -35,10 +28,8 @@ closeBtn.addEventListener("click", () => {
   overlayNav.style.width = "0";
 });
 
-// Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
-// Handle the slider-navigation positioning and visibility
 ScrollTrigger.create({
   trigger: ".cards",
   start: "top top",
@@ -81,15 +72,14 @@ function updateDayIndicator(day) {
   dayIndicator.textContent = `DAY ${day}`;
 }
 
-// Create ScrollTrigger instances to animate .nav-pointer and .orange-divider
 gsap.to(".nav-pointer", {
-  y: "100%", // Adjust the end position as needed
+  y: "100%", 
   scrollTrigger: {
     trigger: ".cards",
     start: "top top",
     end: "bottom top",
-    scrub: true, // This makes the animation follow the scroll position
-    markers: false, // Set to true if you want to debug with visual markers
+    scrub: true, 
+    markers: false, 
   },
 });
 
