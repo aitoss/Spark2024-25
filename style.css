@@ -538,6 +538,13 @@ main {
   height: 4vw;
 }
 
+.rocket{
+  transition: transform 0.5s ease-in-out; 
+}
+.rocket:hover{
+  transform: rotate(360deg);
+}
+
 body.no-scroll {
   overflow: hidden;
 }
