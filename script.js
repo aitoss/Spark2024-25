@@ -1,15 +1,8 @@
-// nav-overlay
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".nav-overlay");
 const closeBtn = document.querySelector(".close-btn");
 const overlayNav = document.querySelector(".overlay-nav");
-// const crsr = document.querySelector(".custom-crsr");
-// const footer = document.querySelector(".page7");
-// footer.addEventListener("mousemove", (e) => {
-//   // location.reload();
-//   crsr.style.top = e.y - 50 + "px";
-//   crsr.style.left = e.x - 50 + "px";
-// });
+
 hamburger.addEventListener("click", () => {
   overlay.style.width = "100%";
   overlay.style.opacity = "1";
@@ -35,10 +28,8 @@ closeBtn.addEventListener("click", () => {
   overlayNav.style.width = "0";
 });
 
-// Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
-// Handle the slider-navigation positioning and visibility
 ScrollTrigger.create({
   trigger: ".cards",
   start: "top top",
@@ -81,15 +72,14 @@ function updateDayIndicator(day) {
   dayIndicator.textContent = `DAY ${day}`;
 }
 
-// Create ScrollTrigger instances to animate .nav-pointer and .orange-divider
 gsap.to(".nav-pointer", {
-  y: "100%", // Adjust the end position as needed
+  y: "100%", 
   scrollTrigger: {
     trigger: ".cards",
     start: "top top",
     end: "bottom top",
-    scrub: true, // This makes the animation follow the scroll position
-    markers: false, // Set to true if you want to debug with visual markers
+    scrub: true, 
+    markers: false, 
   },
 });
 
@@ -258,80 +248,80 @@ document.querySelectorAll(".footer-nav li a").forEach((anchor) => {
 document.getElementById("notesButton1").addEventListener("click", function () {
   // window.location.href = "";
   window.open(
-    "https://economic-snowboard-82f.notion.site/HTML-e306ec5af9014818847fe94d8e1eb852?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton3").addEventListener("click", function () {
   window.open(
-    "https://economic-snowboard-82f.notion.site/https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton3").addEventListener("click", function () {
   window.open(
-    "https://economic-snowboard-82f.notion.site/Introduction-to-CSS-5778d2f272e948b4a352feac6c067f3b?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton4").addEventListener("click", function () {
   window.open(
-    "https://economic-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton5").addEventListener("click", function () {
   window.open(
-    "https://economic-https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+   "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton6").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton7").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton8").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton9").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton10").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton11").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 document.getElementById("notesButton12").addEventListener("click", function () {
   window.open(
-    "https://https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8-snowboard-82f.notion.site/CSS-Advanced-054b078ed9d84dffaaa07c59e0b3502d?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
 
 document.getElementById("notes").addEventListener("click", function () {
   window.open(
-    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8?pvs=4",
+    "https://economic-snowboard-82f.notion.site/SPARK-2k24-931b6ffdb0294e85981095e1852b8eb8",
     "_blank"
   );
 });
